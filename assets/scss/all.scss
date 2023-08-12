@@ -1,0 +1,17 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+// utils
+@import "./utils/variables";
+@import "./utils/base";
+@import "./utils/generic";
+@import "./utils/mixin";
+
+// layout
+@import './layout/header.scss';
+@import './layout/footer.scss';
+
+// pages
+@import './pages/index.scss';
+
+// vendor
+@import "../node_modules/bootstrap/scss/bootstrap";

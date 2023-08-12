@@ -1,0 +1,109 @@
+@mixin img-hide-text {
+    text-indent: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin img-hover-zoom-in {
+    transition: all 0.5s ease-out;
+    transform: scale(1.4, 1.4);
+}
+
+@mixin bg-img-cover {
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 2px 6px #00000029;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+}
+
+@mixin link-hover-padding {
+    background: $white;
+    color: $primary;
+    padding: 6px 0;
+}
+
+@mixin btn-hover-focus{
+    &:hover {
+        background: lighten($color: $primary, $amount: 10);
+    }
+    &:focus {
+        background: darken($color: $primary, $amount: 10);
+    }
+}
+
+@mixin text-overflow-hidden {
+    display: -webkit-box;
+    -webkit-line-clamp: 6; // 設定行數
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin scrollbar-change-color{
+    &::-webkit-scrollbar {
+        width: 8px; //滾動條寬度
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary; //滾動條滑塊顏色
+        border-radius: 3px;
+        -moz-border-radius: 3px; //Firefox 兼容
+        -webkit-border-radius: 3px; //Chrome、Safari 兼容
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $light-color; //滾動條軌道背景顏色
+    }
+}
+
+@mixin img-rotate($deg, $time){
+    text-align:center;
+    -moz-transform:rotate($deg);
+    -webkit-transform:rotate($deg);
+    -o-transform:rotate($deg);
+    -ms-transform:rotate($deg);
+    transform:rotate($deg);
+    transition:$time;
+
+}
+
+
+@mixin media-992 {
+    @media(max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-696 {
+    @media(max-width: 696px) {
+        @content;
+    }
+}
+
+@mixin media-576 {
+    @media(max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin media-480 {
+    @media(max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: 375px) {
+        @content;
+    }
+}
