@@ -2,16 +2,19 @@
 
 // utils
 @import "./utils/variables";
-@import "./utils/base";
-@import "./utils/generic";
 @import "./utils/mixin";
-
-// layout
-@import './layout/header.scss';
-@import './layout/footer.scss';
-
-// pages
-@import './pages/index.scss';
 
 // vendor
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../images/icofont/icofont.min.css";
+
+// base
+@import "./utils/base";
+@import "./utils/generic";
+
+// layout
+@import "./layout/footer";
+@import "./layout/header";
+
+// pages
+@import "./pages/index";
