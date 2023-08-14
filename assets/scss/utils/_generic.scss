@@ -1,6 +1,25 @@
 .link-bg-hover{
     &:hover{
         background: $warning;
+        p{
+            animation: bounce 1s 1;
+        }
+    }
+}
+
+.Noto-Serif-TC{
+    font-family: Noto Serif TC;
+}
+// 文字跳動效果
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
     }
 }
 
@@ -16,6 +35,28 @@
     }
 }
 
+.img-hover{
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.hover-d-inline{
+    display: none;
+}
+
+.btn-hover{
+    &:hover{
+        .hover-d-none{
+            display: none;
+        }
+        .hover-d-inline{
+            display: inline-block;
+        }
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .my-container{
@@ -30,18 +71,21 @@
 
 
 // 字體大小
+.fs-14{
+    font-size: 0.875rem;
+}
 .fs-18{
     font-size: 1.125rem;
 }
 
-@for $i from 1 through 4{
+@for $i from 0 through 4{
     .fs-#{$i*4 + 16}{
         font-size: 1rem + ($i * 0.25rem);
     }
 }
 
 @media (min-width: 576px) {
-    @for $i from 1 through 6{
+    @for $i from 0 through 6{
         .fs-sm-#{$i*4 + 16}{
             font-size: 1rem + ($i * 0.25rem);
         }
@@ -49,7 +93,7 @@
 }
 
 @media (min-width: 768px) {
-    @for $i from 1 through 8{
+    @for $i from 0 through 8{
         .fs-md-#{$i*4 + 16}{
             font-size: 1rem + ($i * 0.25rem);
         }
@@ -57,9 +101,12 @@
 }
 
 @media (min-width: 992px) {
-    @for $i from 1 through 12{
+    @for $i from 0 through 12{
         .fs-lg-#{$i*4 + 16}{
             font-size: 1rem + ($i * 0.25rem);
         }
+    }
+    .fs-lg-18{
+        font-size: 1.125rem;
     }
 }
