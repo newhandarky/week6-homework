@@ -5,35 +5,23 @@
     
 }
 
-.event {
-    img{
-        width: 80px;
-        height: 80px;
-    }
-}
-
 .spark{
     width: 24px;
     height: 24px;
 }
 
-// .card__list{
-//     .card{
-//         max-height: 528px;
-//     }
-//     &__photo{
-//         img{
-//             object-fit: cover;
-//         }
-//     }
-// }
-
+.event {
+    img{
+        width: 40px;
+        height: 40px;
+    }
+}
 
 .card__list{
     &__bg{
         @include bg-img-cover;
         max-width: 100%;
-        height: 255px;
+        height: 210px;        
     }
     &__bg1{
         background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/01.jpg?raw=true");
@@ -45,43 +33,39 @@
         background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/03.jpg?raw=true");
     }
     &__bg4{
-        // @include bg-img-cover;
-        // width: 100%;
-        // height: auto;
         background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/04.jpg?raw=true");
     }
     &__bg5{
         background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/05.jpg?raw=true");
-        // background-size: cover;
-        // width: 100%;
     }
     &__bg6{
         background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/06.jpg?raw=true");
     }
 }
 
-@media (max-width: 992px) {
-    .event {
+
+
+@media (min-width: 576px) {
+    .event{
         img{
             width: 60px;
             height: 60px;
         }
     } 
-
 }
 
-@media (max-width: 768px) {
-    .event{
+@media (min-width: 992px) {
+    .event {
         img{
-            width: 40px;
-            height: 40px;
+            width: 80px;
+            height: 80px;
         }
-    } 
-
-
+    }
 }
-@media (max-width: 576px) {
+
+
+@media (min-width: 768px) {
     .card__list__bg{
-        height: 210px;
+        height: 255px;
     }
 }
