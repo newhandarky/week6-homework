@@ -1,0 +1,11 @@
+.page-link{
+    &:hover{
+        background: $dark;
+        color: $warning;
+    }
+}
+
+.thisPage{
+    background: $dark;
+    color: $warning;
+}
