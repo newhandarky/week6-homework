@@ -29,9 +29,17 @@
     }
 }
 
+.left-border{
+    border: 2px solid $dark;
+}
+
 .link-hover{
     &:hover{
         color: $warning;
+        background: $dark;
+        .left-border{
+            border-color: $warning;
+        }
     }
 }
 
