@@ -532,6 +532,14 @@ $container-max-widths: (
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           1.5rem !default;
+$gutters: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -741,12 +749,12 @@ $mark-bg:                     $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
-$table-cell-padding-x:        .5rem !default;
-$table-cell-padding-y-sm:     .25rem !default;
-$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-padding-y:        0.5rem !default;
+$table-cell-padding-x:        0 !default;
+$table-cell-padding-y-sm:     0 !default;
+$table-cell-padding-x-sm:     0 !default;
 
-$table-cell-vertical-align:   top !default;
+$table-cell-vertical-align:   center !default;
 
 $table-color:                 var(--#{$prefix}body-color) !default;
 $table-bg:                    var(--#{$prefix}body-bg) !default;
@@ -768,7 +776,7 @@ $table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
 
 $table-border-factor:         .1 !default;
 $table-border-width:          var(--#{$prefix}border-width) !default;
-$table-border-color:          var(--#{$prefix}border-color) !default;
+$table-border-color:          $dark !default;
 
 $table-striped-order:         odd !default;
 $table-striped-columns-order: even !default;

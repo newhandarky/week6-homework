@@ -1,0 +1,56 @@
+.photo {
+    max-height: 550px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.diagonal-line {
+    width: 50px;
+    height: 0;
+    transform: rotate(-60deg);
+    @media (min-width: 1200px) {
+        width: 75px;
+    }
+}
+
+.event__date{
+    max-height: 119px;
+}
+
+table{
+    @media (min-width: 768px) {
+        th, td{
+            width: 27%;
+        }
+        td:last-child{
+            width: 19%;
+        }
+        th:last-child{
+            width: 19%;
+        }
+    }
+    @media (min-width: 1200px) {
+        th, td{
+            width: 29%;
+        }
+        td:last-child{
+            width: 13%;
+        }
+        th:last-child{
+            width: 13%;
+        }
+    }
+    @media (min-width: 1400px) {
+        th, td{
+            width: 30%;
+        }
+        td:last-child{
+            width: 10%;
+        }
+        th:last-child{
+            width: 10%;
+        }
+    }
+
+}
