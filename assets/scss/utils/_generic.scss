@@ -1,15 +1,26 @@
-.link-bg-hover{
-    &:hover{
+.link-bg-hover {
+    &:hover {
         background: $warning;
-        p{
+
+        p {
             animation: bounce 1s 1;
         }
     }
 }
 
-.Noto-Serif-TC{
-    font-family: Noto Serif TC;
+.wrapper {
+    flex-grow: 1;
+    /*可佔滿垂直剩餘的空間*/
 }
+
+.noto-Serif-TC {
+    font-family: 'Noto Serif TC', serif;
+}
+
+.noto-sens-TC {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
 // 文字跳動效果
 @keyframes bounce {
 
@@ -23,88 +34,98 @@
     }
 }
 
-.nav-hover{
-    &:hover{
+.nav-hover {
+    &:hover {
         color: $dark-hover;
     }
 }
 
-.left-border{
+.left-border {
     border: 2px solid $dark;
 }
 
-.link-hover{
-    &:hover{
+.link-hover {
+    &:hover {
         color: $warning;
         background: $dark;
-        .left-border{
+
+        .left-border {
             border-color: $warning;
         }
     }
 }
 
-.img-hover{
-    &:hover{
+.img-hover {
+    &:hover {
         opacity: 0.7;
     }
 }
 
-.hover-d-inline{
+.active {
+    background: $dark;
+    color: $warning;
+}
+
+.hover-d-inline {
     display: none;
 }
 
-.btn-hover{
-    &:hover{
-        .hover-d-none{
+.btn-hover {
+    &:hover {
+        .hover-d-none {
             display: none;
         }
-        .hover-d-inline{
+
+        .hover-d-inline {
             display: inline-block;
         }
     }
 }
 
 // 字體大小
-.fs-14{
+.fs-14 {
     font-size: 0.875rem;
 }
-.fs-18{
+
+.fs-18 {
     font-size: 1.125rem;
 }
 
 
-@for $i from 0 through 4{
-    .fs-#{$i*4 + 16}{
+@for $i from 0 through 4 {
+    .fs-#{$i*4 + 16} {
         font-size: 1rem + ($i * 0.25rem);
     }
 }
 
 @media (min-width: 576px) {
-    @for $i from 0 through 6{
-        .fs-sm-#{$i*4 + 16}{
+    @for $i from 0 through 6 {
+        .fs-sm-#{$i*4 + 16} {
             font-size: 1rem + ($i * 0.25rem);
         }
     }
 }
 
 @media (min-width: 768px) {
-    @for $i from 0 through 8{
-        .fs-md-#{$i*4 + 16}{
+    @for $i from 0 through 8 {
+        .fs-md-#{$i*4 + 16} {
             font-size: 1rem + ($i * 0.25rem);
         }
     }
-    .fs-md-22{
+
+    .fs-md-22 {
         font-size: 1.375rem;
     }
 }
 
 @media (min-width: 992px) {
-    @for $i from 0 through 12{
-        .fs-lg-#{$i*4 + 16}{
+    @for $i from 0 through 12 {
+        .fs-lg-#{$i*4 + 16} {
             font-size: 1rem + ($i * 0.25rem);
         }
     }
-    .fs-lg-18{
+
+    .fs-lg-18 {
         font-size: 1.125rem;
     }
 }

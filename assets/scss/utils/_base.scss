@@ -1,21 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Yeseva+One&display=swap');
-img{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&family=Yeseva+One&display=swap');
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	/*使物件依序排列*/
+	flex-direction: column;
+	/*使物件垂直排列*/
+}
+
+img {
 	vertical-align: bottom;
 	max-width: 100%;
 	height: auto;
 }
 
-h1, h2, h3, h4, h5, h6, a, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
 	padding: 0;
 	margin: 0;
 }
 
-ul, ol, li{
-	list-style: none; 
-	margin: 0 ;
+ul,
+ol,
+li {
+	list-style: none;
+	margin: 0;
 	padding: 0;
-}  
+}
 
-input{
+input {
 	font-weight: 400;
 }

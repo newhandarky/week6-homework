@@ -1,0 +1,19 @@
+.step-box{
+    min-height: 32px;
+    min-width: 32px;
+    @media (min-width:768px){
+        min-height: 48px;
+        min-width: 48px;
+    }
+}
+
+form{
+    a{
+        color: $secondary;
+        &:hover{
+            &::after{
+                content: "?? 您確定要取消嗎?";
+            }
+        }
+    }
+}
