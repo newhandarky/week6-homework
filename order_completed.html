@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第六週作業-活動訂票網-訂單完成頁面</title>
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-64611947.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-8022c3b4.css">
+</head>
+
+<body>
+    <div class="container-fluid border-bottom border-2 border-dark">
+    <header class="py-3 py-md-6 d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+            <h1 class="fs-lg-32 d-flex">
+                <a href="index.html" class="d-flex align-items-center">
+                    <img class="logo me-6"
+                        src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/logo.png?raw=true"
+                        alt="網站LOGO">
+                    <span class="">7TAO </span>
+                    <span class="fs-6 ms-1">活動訂票網</span>
+                </a>
+            </h1>
+            <div class="d-flex">
+                <input class="ms-0 ms-lg-12 py-2 px-6 bg-bg-color" type="text" placeholder="探索活動">
+                <button class="btn btn-dark p-md-4" type="submit"><i
+                        class="p-1 icofont-search-1 text-warning"></i></button>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <button class="d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
+                href="#hamburger" role="button" aria-expanded="false" aria-controls="hamburger">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 7H26H4ZM4 15H26H4ZM4 23H26H4Z" fill="black" />
+                    <path d="M4 7H26M4 15H26M4 23H26" stroke="#030303" stroke-width="2" stroke-miterlimit="10"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <nav class="d-none d-md-flex align-items-center">
+            <ul class="d-flex">
+                <li>
+                    <a href="" class="nav-hover fs-18">
+                        <i class="p-1 icofont-file-alt">
+                        </i>REGISTER
+                    </a>
+                </li>
+                <li class="ms-6">
+                    <a href="login.html" class="nav-hover fs-18">
+                        <i class="p-1 icofont-ui-user">
+                        </i>LOGIN
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+
+<div class="dropdown">
+    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Dropdown link
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+
+<nav class="collapse" id="hamburger">
+    <div class="container">
+        <ul class="text-end">
+            <li class="my-3">
+                <a href="" class="nav-hover fs-18">
+                    <i class="p-1 icofont-file-alt">
+                    </i>REGISTER
+                </a>
+            </li>
+            <li class="mb-3">
+                <a href="" class="nav-hover fs-18">
+                    <i class="p-1 icofont-ui-user">
+                    </i>LOGIN
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+        <main class="container-fluid pt-6 pt-md-15">
+            <div class="col-md-6 m-auto">
+                <div class="d-flex justify-content-between py-4 py-md-2 noto-Serif-TC">
+                    <div
+                        class="border-dark border ms-4 ms-md-2 step-box d-flex align-items-center justify-content-center active">
+                        <span class="fs-md-20">1</span>
+                    </div>
+                    <div class="w-100 position-relative">
+                        <div
+                            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
+                        </div>
+                    </div>
+                    <div class="border-dark border step-box d-flex align-items-center justify-content-center active">
+                        <span class="fs-md-20">2</span>
+                    </div>
+                    <div class="w-100 position-relative">
+                        <div
+                            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
+                        </div>
+                    </div>
+                    <div
+                        class="border-dark border me-4 me-md-2 step-box d-flex align-items-center justify-content-center active">
+                        <span class="fs-md-20">3</span>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mb-8 mb-md-10 mb-lg-12">
+                    <div class="mb-1 mb-md 2">
+                        <span class="fw-bold">訂單確認</span>
+                    </div>
+                    <div class="mb-1 mb-md 2">
+                        <span class="fw-bold">結帳付款</span>
+                    </div>
+                    <div class="mb-1 mb-md 2">
+                        <span class="fw-bold">訂購結果</span>
+                    </div>
+                </div>
+
+                <div class="mb-8 mb-md-10 md-lg-12">
+                    <div class="text-center mb-4 mb-md-2">
+                        <i class="fs-32 fs-md-48 icofont-check-circled"></i>
+                    </div>
+                    <h2 class="fs-32 fs-md-40 fs-lg-48 fw-bold text-start text-md-center mb-8">訂購成功</h2>
+
+                    <div class="border-top border-3 border-dark noto-Serif-TC mb-4">
+                        <p class="d-flex justify-content-between py-2 border-bottom border-dark">
+                            <span class="fw-bold">訂單編號</span>
+                            <span class="noto-sens-TC">892746123</span>
+                        </p>
+                        <p class="d-flex justify-content-between py-2 border-bottom border-dark">
+                            <span class="fw-bold">訂購時間</span>
+                            <span class="noto-sens-TC">2023/04/28 14:30</span>
+                        </p>
+                        <p class="d-flex justify-content-between py-2 border-bottom border-dark">
+                            <span class="fw-bold">票券</span>
+                            <span class="noto-sens-TC">改頭換面票（含大改造）$8000</span>
+                        </p>
+                        <p class="d-flex justify-content-between py-2 border-bottom border-dark">
+                            <span class="fw-bold">取票序號</span>
+                            <span class="noto-sens-TC text-danger fw-bold">95G54J4434</span>
+                        </p>
+                        <p class="d-flex justify-content-between py-2 border-bottom border-dark">
+                            <span class="fw-bold">取票號碼</span>
+                            <span class="noto-sens-TC text-danger fw-bold">04597101</span>
+                        </p>
+                    </div>
+                    <p class="noto-sens-TC text-secondary">
+                        請至 7-Eleven 完成取票，請於 ibon 點選【購票/取票/訂房】>【售票系統】>【取票】>【拓元售票系統】。<br>
+                        若您未前往取票，本筆交易仍視為完成，不可取消訂單。<br>
+                        若需退票，請按照退票辦法進行申請。
+                    </p>
+                </div>
+
+
+        </main>
+
+
+
+
+
+        <footer class="noto-sens-TC border-3 border-dark border-top py-6 py-md-8 w-100">
+    <p class="fs-14 fs-md-16 text-center">
+        © 7TAO七逃. All Rights Reserved
+    </p>
+</footer>
+
+            
+</body>
+
+</html>

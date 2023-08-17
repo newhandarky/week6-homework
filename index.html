@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>第六週作業-活動訂票網首頁</title>
-  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-367f4e9b.js"></script>
-  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-c674d829.css">
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-64611947.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-8022c3b4.css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid border-bottom border-2 border-dark">
     <header class="py-3 py-md-6 d-flex justify-content-between">
         <div class="d-flex align-items-center">
             <h1 class="fs-lg-32 d-flex">
@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="ms-6">
-                    <a href="" class="nav-hover fs-18">
+                    <a href="login.html" class="nav-hover fs-18">
                         <i class="p-1 icofont-ui-user">
                         </i>LOGIN
                     </a>
@@ -59,7 +59,21 @@
     </header>
 </div>
 
-<nav class="collapse border-top border-3 border-dark" id="hamburger">
+
+<div class="dropdown">
+    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Dropdown link
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+
+<nav class="collapse" id="hamburger">
     <div class="container">
         <ul class="text-end">
             <li class="my-3">
@@ -77,15 +91,15 @@
         </ul>
     </div>
 </nav>
-    <main class="w-100 border-3 border-dark border-top pt-4 pt-md-8">
+    <main class="w-100 pt-4 pt-md-8">
       <div class="container">
         <div
           class="block__1 pt-4 pt-md-12 ps-10 ps-md-12 pb-6 mb-8 mb-md-12 text-white d-flex flex-column justify-content-between">
           <h2 class="fs-32 fs-sm-40 fs-md-48 fs-lg-60 text-reset">19 MAY <span class="d-block d-sm-inline">2023</span>
           </h2>
           <div class="text-center">
-            <h3 class="fs-18 fs-sm-24 fw-bold text-reset mb-4">隔牆有耳-沒有草東的派對</h3>
-            <p class="d-none d-sm-block">
+            <h3 class="fs-18 fs-sm-24 text-reset mb-4">隔牆有耳-沒有草東的派對</h3>
+            <p class="d-none d-sm-block noto-sens-TC">
               你各位聽團仔們！每次想跟朋友一起聽草東專場卻每一次都搶不到票？「草東沒有派對」永遠都是「草東沒有門票」！
               <br> 帶上啤酒、野餐墊，讓我們在Live House外面一起開場「沒有草東的派對」吧！
             </p>
@@ -155,7 +169,7 @@
         <div id="recent"
           class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3">
           <a class="fs-24 fs-sm-32 fs-md-48 fs-lg-64 nav-hover" href="">RECENT</a>
-          <a class="fs-16 fs-sm-20 fs-md-24 fs-lg-32 fw-bold nav-hover" href="">近期活動</a>
+          <a class="fs-16 fs-sm-20 fs-md-24 fs-lg-32 fw-bold nav-hover" href="events.html">近期活動</a>
         </div>
 
         <div class="card__list">
@@ -169,8 +183,8 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/01.jpg?raw=true"
                       alt="活動圖片1">
                   </a>
-                  <h4 class="card-title fs-18 fs-md-24 fw-bold mb- mb-md-3">邪典電影派對——房間</h4>
-                  <p class="card-text">你有聽說過「大災難家」裡面的主角 Tommy Wiseau
+                  <h4 class="card-title fs-18 fs-md-24 mb-md-3">邪典電影派對——房間</h4>
+                  <p class="card-text noto-sens-TC">你有聽說過「大災難家」裡面的主角 Tommy Wiseau
                     製作的「史上最爛的電影」——房間嗎？在美國甚至演變成一種邪教、一種派對的形式，在電影播放的對著螢幕丟湯匙都...</p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -179,7 +193,7 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                       alt="閃光效果圖片">
                     社群活動</a>
-                  <a class="d-flex align-items-center fw-bold" href="" data-bs-toggle="modal"
+                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal"
                     data-bs-target="#joinMember">開賣中
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
@@ -199,8 +213,8 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/02.jpg?raw=true"
                       alt="活動圖片2">
                   </a>
-                  <h4 class="card-title fs-18 fs-md-24 fw-bold mb- mb-md-3">怪舞俱樂部</h4>
-                  <p class="card-text">覺得自己的舞蹈細胞異於常人？每次隨著音樂起舞身邊的人總是露出無法理解的表情？來這裡就對了！來參加這場一起跳舞的聚會，也會在每一次的舞會中選出舞步最怪的...
+                  <h4 class="card-title fs-18 fs-md-24 mb-md-3">怪舞俱樂部</h4>
+                  <p class="card-text noto-sens-TC">覺得自己的舞蹈細胞異於常人？每次隨著音樂起舞身邊的人總是露出無法理解的表情？來這裡就對了！來參加這場一起跳舞的聚會，也會在每一次的舞會中選出舞步最怪的...
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -209,7 +223,7 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                       alt="閃光效果圖片">
                     演出</a>
-                  <a class="d-flex align-items-center" href="" data-bs-toggle="modal" data-bs-target="#joinMember">檢視活動
+                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal" data-bs-target="#joinMember">檢視活動
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
                         d="M12.6144 7.55195L9.3632 4.30075C9.1152 4.05275 8.7136 4.05275 8.4656 4.30075L8.1856 4.58075C7.9376 4.82875 7.9376 5.23035 8.1856 5.47835L10.2608 7.55355C10.3856 7.67835 10.4464 7.83995 10.4464 8.00155C10.4464 8.16315 10.384 8.32635 10.2608 8.44955L8.1856 10.5247C7.9376 10.7727 7.9376 11.1743 8.1856 11.4223L8.4656 11.7023C8.7136 11.9471 9.1152 11.9471 9.3632 11.6991L12.6144 8.44795C12.7392 8.32315 12.8 8.16155 12.8 7.99995C12.8 7.83835 12.7376 7.67515 12.6144 7.55195ZM7.8144 7.55195L4.5632 4.30075C4.3152 4.05275 3.9136 4.05275 3.6656 4.30075L3.3856 4.58075C3.1376 4.82875 3.1376 5.23035 3.3856 5.47835L5.4608 7.55355C5.5856 7.67835 5.6464 7.83995 5.6464 8.00155C5.6464 8.16315 5.584 8.32635 5.4608 8.44955L3.3856 10.5247C3.1376 10.7727 3.1376 11.1743 3.3856 11.4223L3.6656 11.7023C3.9136 11.9471 4.3152 11.9471 4.5632 11.6991L7.8144 8.44795C7.9392 8.32315 8 8.16155 8 7.99995C8 7.83835 7.9376 7.67515 7.8144 7.55195Z"
@@ -228,8 +242,8 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/03.jpg?raw=true"
                       alt="活動圖片3">
                   </a>
-                  <h4 class="card-title fs-18 fs-md-24 fw-bold mb- mb-md-3">哈利波特馬拉松</h4>
-                  <p class="card-text">每次身邊有人開啟哈利波特的話題，自己永遠都是聽不懂的那個麻瓜？看大家在討論魁地奇、用咒語鬥法的時候，自己永遠是陪笑的那個人？穿好你的法袍、帶上你的法杖...
+                  <h4 class="card-title fs-18 fs-md-24 mb-md-3">哈利波特馬拉松</h4>
+                  <p class="card-text noto-sens-TC">每次身邊有人開啟哈利波特的話題，自己永遠都是聽不懂的那個麻瓜？看大家在討論魁地奇、用咒語鬥法的時候，自己永遠是陪笑的那個人？穿好你的法袍、帶上你的法杖...
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -238,7 +252,7 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                       alt="閃光效果圖片">
                     聯誼</a>
-                  <a class="d-flex align-items-center fw-bold" href="" data-bs-toggle="modal"
+                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal"
                     data-bs-target="#joinMember">開賣中
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
@@ -258,8 +272,8 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/04.jpg?raw=true"
                       alt="活動圖片4">
                   </a>
-                  <h4 class="card-title fs-18 fs-md-24 fw-bold mb- mb-md-3">皮卡丘排球大賽</h4>
-                  <p class="card-text">還記得小時候玩的小遊戲嗎？總是有朋友吹噓自己獨孤求敗、只求一敗？是時候該展現真正的實力了！本活動採用瑞士制賽程，以絕對公平的方式進行，是時候該證明自己...
+                  <h4 class="card-title fs-18 fs-md-24 mb-md-3">皮卡丘排球大賽</h4>
+                  <p class="card-text noto-sens-TC">還記得小時候玩的小遊戲嗎？總是有朋友吹噓自己獨孤求敗、只求一敗？是時候該展現真正的實力了！本活動採用瑞士制賽程，以絕對公平的方式進行，是時候該證明自己...
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -268,7 +282,7 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                       alt="閃光效果圖片">
                     遊戲競賽</a>
-                  <a class="d-flex align-items-center fw-bold" href="" data-bs-toggle="modal"
+                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal"
                     data-bs-target="#joinMember">開賣中
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
@@ -288,8 +302,8 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/05.jpg?raw=true"
                       alt="活動圖片5">
                   </a>
-                  <h4 class="card-title fs-18 fs-md-24 fw-bold mb- mb-md-3">酒精路跑</h4>
-                  <p class="card-text">身邊總是有對自己酒量有高度自信的朋友嗎？拉著他/她一起來參加酒精路跑吧！一起拍下第一杯直到倒下為止的照片，一起喝遍市區內各家極具品味的酒吧。
+                  <h4 class="card-title fs-18 fs-md-24 mb-md-3">酒精路跑</h4>
+                  <p class="card-text noto-sens-TC">身邊總是有對自己酒量有高度自信的朋友嗎？拉著他/她一起來參加酒精路跑吧！一起拍下第一杯直到倒下為止的照片，一起喝遍市區內各家極具品味的酒吧。
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -298,7 +312,7 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                       alt="閃光效果圖片">
                     社群活動</a>
-                  <a class="d-flex align-items-center fw-bold" href="" data-bs-toggle="modal"
+                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal"
                     data-bs-target="#joinMember">開賣中
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
@@ -318,8 +332,8 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/06.jpg?raw=true"
                       alt="活動圖片6">
                   </a>
-                  <h4 class="card-title fs-18 fs-md-24 fw-bold mb- mb-md-3">展覽——我的房間</h4>
-                  <p class="card-text">每個人的房間總會有那麼一兩個能代表自己的物事，或許是再平凡不過的牙刷、馬克杯，或許有那些別人的房間從沒出現過的小東西——那些能定義自己的特別的東西。</p>
+                  <h4 class="card-title fs-18 fs-md-24 mb-md-3">展覽——我的房間</h4>
+                  <p class="card-text noto-sens-TC">每個人的房間總會有那麼一兩個能代表自己的物事，或許是再平凡不過的牙刷、馬克杯，或許有那些別人的房間從沒出現過的小東西——那些能定義自己的特別的東西。</p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
                   <a class="fw-bold" href="">
@@ -327,7 +341,7 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                       alt="閃光效果圖片">
                     展覽</a>
-                  <a class="d-flex align-items-center fw-bold" href="" data-bs-toggle="modal"
+                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal"
                     data-bs-target="#joinMember">開賣中
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
@@ -352,26 +366,38 @@
             <div class="chatGpt img-hover w-100"></div>
           </div>
           <div class="col-lg-5">
-            <h4 class="f-18 fw-bold mb-2 mb-lg-8">切特居批踢</h4>
+            <h4 class="f-18 mb-2 mb-lg-8">切特居批踢</h4>
             <div class="d-flex mb-3 mb-lg-8">
-              <span class="fw-bold py-1 px-4 px-lg-6 border border-dark position-relative me-2">
-                競賽
-                <span class="d-flex border border-dark border-2 position-absolute h-100 top-0 start-0"></span>
-              </span>
-              <span class="fw-bold py-1 px-4 px-lg-6 border border-dark position-relative me-2">
-                科技
-                <span class="d-flex border border-dark border-2 position-absolute h-100 top-0 start-0"></span>
-              </span>
-              <span class="fw-bold py-1 px-4 px-lg-6 border border-dark position-relative ">
-                有趣
-                <span class="d-flex border border-dark border-2 position-absolute h-100 top-0 start-0"></span>
-              </span>
+              <div class="mb-2 me-2 border border-dark overflow-hidden">
+                <a class="link-hover nav-hover d-block" href="">
+                  <span class="d-inline left-border h-100 py-1"></span>
+                  <div class="d-inline fw-bold py-1 px-4 px-lg-6">
+                    競賽
+                  </div>
+                </a>
+              </div>
+              <div class="mb-2 me-2 border border-dark overflow-hidden">
+                <a class="link-hover nav-hover d-block" href="">
+                  <span class="d-inline left-border h-100 py-1"></span>
+                  <div class="d-inline fw-bold py-1 px-4 px-lg-6">
+                    科技
+                  </div>
+                </a>
+              </div>
+              <div class="mb-2 me-2 border border-dark overflow-hidden">
+                <a class="link-hover nav-hover d-block" href="">
+                  <span class="d-inline left-border h-100 py-1"></span>
+                  <div class="d-inline fw-bold py-1 px-4 px-lg-6">
+                    有趣
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <p class="mb-3 mb-lg-8">最近網路上很流行的AI程式 ChatGPT，可以用來聊天或是查詢、整理各種資料，不同的應用方式如雨後春筍般冒出來。
+            <p class="mb-3 mb-lg-8 noto-sens-TC">最近網路上很流行的AI程式 ChatGPT，可以用來聊天或是查詢、整理各種資料，不同的應用方式如雨後春筍般冒出來。
               這個活動讓大家把自己最有特色的使用方法提出來讓大家參考，也會投票出最有趣的用法。
               該讓其他人知道自己使用 ChatGPT 的姿勢才是最特別的那個了！</p>
-            <button class="btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex justify-content-center">查看活動詳情
+            <button class="noto-sens-TC btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex align-items-center justify-content-center">查看活動詳情
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 class="hover-d-none">
                 <path
@@ -398,7 +424,7 @@
             <li class="col-md-6 col-xl-3 card border-0 mb-10 mb-xl-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
                 <h3
-                  class="fs-16 fw-bold py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
+                  class="fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
                   社群活動</h3>
                 <img class="card__item__photo img-hover img-fluid w-100 mb-3 mb-lg-4"
                   src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/album/01.jpg?raw=true"
@@ -409,7 +435,7 @@
             <li class="col-md-6 col-xl-3 card border-0 mb-10 mb-xl-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
                 <h3
-                  class="fs-16 fw-bold py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
+                  class="noto-sens-TC fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
                   藝文活動</h3>
                 <img class="card__item__photo img-hover img-fluid w-100 mb-3 mb-lg-4"
                   src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/album/02.jpg?raw=true"
@@ -420,7 +446,7 @@
             <li class="col-md-6 col-xl-3 card border-0 mb-10 mb-md-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
                 <h3
-                  class="fs-16 fw-bold py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
+                  class="noto-sens-TC fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
                   自我覺察</h3>
                 <img class="card__item__photo img-hover img-fluid w-100 mb-3 mb-lg-4"
                   src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/album/03.jpg?raw=true"
@@ -431,7 +457,7 @@
             <li class="col-md-6 col-xl-3 card border-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
                 <h3
-                  class="fs-16 fw-bold py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
+                  class="noto-sens-TC fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
                   聯誼活動</h3>
                 <img class="card__item__photo img-hover img-fluid w-100 mb-3 mb-lg-4"
                   src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/album/04.jpg?raw=true"
@@ -450,27 +476,27 @@
             <div class="row row-cols-1 row-cols-lg-2">
               <div class="col pe-lg-0 mb-6 mb-lg-0">
                 <div class="border border-dark border-2 h-100">
-                  <h3 class="Noto-Serif-TC fw-bold border-bottom border-dark border-2 py-4 ps-3 ps-lg-8">#FOLLOW US</h3>
-                  <div class="py-4 py-lg-8 px-lg-8 px-3">
+                  <h3 class="noto-Serif-TC border-bottom border-dark border-2 py-4 ps-3 ps-lg-8">#FOLLOW US</h3>
+                  <div class="py-4 py-lg-8 px-lg-8 px-3 noto-sens-TC">
                     <p class="mb-4 mb-lg-8">想第一時間獲得新奇有趣的活動資訊？<br>
                       追蹤我們的社群吧！<br>
                       也歡迎你聯繫我們，提供好玩有趣的活動企劃。</p>
                     <ul class="followUs">
                       <li class="mb-4">
                         <i class="me-4 p-1 icofont-ui-email"></i>
-                        <a class="Noto-Serif-TC link-mail" href="mailto:">
+                        <a class="link-mail" href="mailto:">
                           7tao.event@gmail.com
                         </a>
                       </li>
                       <li class="mb-4">
                         <i class="me-4 p-1 icofont-phone"></i>
-                        <a class="Noto-Serif-TC link-tel" href="tel:+">
+                        <a class="link-tel" href="tel:+">
                           09123123123
                         </a>
                       </li>
                       <li>
                         <i class="me-4 p-1 icofont-facebook"></i>
-                        <a class="Noto-Serif-TC link-facebook" href="https://www.facebook.com/home.php">
+                        <a class="link-facebook" href="https://www.facebook.com/home.php">
                           7TAO七逃
                         </a>
                       </li>
@@ -480,17 +506,17 @@
               </div>
               <div class="col ps-lg-0">
                 <div class="border border-dark border-2">
-                  <h3 class="Noto-Serif-TC fw-bold text-uppercase border-bottom border-dark border-2 py-4 ps-3 ps-lg-8">
+                  <h3 class="noto-Serif-TC text-uppercase border-bottom border-dark border-2 py-4 ps-3 ps-lg-8">
                     #subscribe us
                   </h3>
                   <div class="py-4 py-lg-8 px-lg-8 px-3">
-                    <p class="mb-4 mb-lg-8">訂閱電子報送折價券！<br>
+                    <p class="noto-sens-TC mb-4 mb-lg-8">訂閱電子報送折價券！<br>
                       定期精選文章資訊及最新優惠資訊，<br>
                       還不通通給我訂閱起來？</p>
                     <input type="email" name="" id="" placeholder="輸入Email"
-                      class="py-4 ps-6 w-100 border-dark border-2 bg-bg-color mb-4">
+                      class="noto-sens-TC py-4 ps-6 w-100 border-dark border-2 bg-bg-color mb-4">
                   </div>
-                  <button class="btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex justify-content-center">
+                  <button class="noto-sens-TC btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex justify-content-center align-items-center">
                     確認訂閱
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       class="hover-d-none">
@@ -511,7 +537,7 @@
           </div>
 
           <div class="container-fluid py-12 py-lg-15 border-top border-dark border-3">
-            <h3 class="fs-18 fs-sm-24 fs-md-28 fs-lg-32 fw-bold mb-3 mb-lg-4 text-center">此刻打盹，你將做夢；此刻學習，你將圓夢</h3>
+            <h3 class="fs-18 fs-sm-24 fs-md-28 fs-lg-32 mb-3 mb-lg-4 text-center">此刻打盹，你將做夢；此刻學習，你將圓夢</h3>
             <p class="fs-14 fs-lg-18 fw-bold text-center">——我也不知道誰說的</p>
           </div>
     </main>
@@ -520,22 +546,22 @@
     <div class="modal-dialog">
         <div class="modal-content bg-white">
             <div class="modal-header border-bottom border-dark border-3 position-relative">
-                <h5 class="modal-title position-absolute start-50 translate-middle-x" id="joinMemberLabel">立刻成為7TAO會員
+                <h5 class="noto-Serif-TC modal-title position-absolute start-50 translate-middle-x" id="joinMemberLabel">立刻成為7TAO會員
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p class="text-center">立刻成為七逃會員，加速活動報名流程並取得活動優惠資訊。<br>
+                <p class="text-center noto-sens-TC">立刻成為七逃會員，加速活動報名流程並取得活動優惠資訊。<br>
                     您也可以先報名活動，日後再註冊帳號，<br>
                     系統會在認證您的Email後，協助您找回舊的訂單。</p>
             </div>
             <div class="modal-footer border-0">
-                <button type="button" class="btn btn-dark m-auto py-2 px-8 link-hover">立即成為會員</button>
+                <button type="button" class="noto-sens-TC btn btn-dark m-auto py-2 px-8 link-hover">立即成為會員</button>
             </div>
         </div>
     </div>
 </div>
-      <footer class="border-3 border-dark border-top py-6 py-md-8">
+      <footer class="noto-sens-TC border-3 border-dark border-top py-6 py-md-8 w-100">
     <p class="fs-14 fs-md-16 text-center">
         © 7TAO七逃. All Rights Reserved
     </p>
