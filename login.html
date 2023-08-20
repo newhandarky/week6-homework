@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第六週作業-活動訂票網-會員登入頁面</title>
-  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-64611947.js"></script>
-  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-8022c3b4.css">
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-7ffd58b4.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-ccfeec78.css">
 </head>
 
 <body>
-    <div class="container-fluid border-bottom border-2 border-dark">
+    <div class="container">
     <header class="py-3 py-md-6 d-flex justify-content-between">
         <div class="d-flex align-items-center">
             <h1 class="fs-lg-32 d-flex">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="d-flex align-items-center">
-            <button class="d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
+            <button class="hamburger d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
                 href="#hamburger" role="button" aria-expanded="false" aria-controls="hamburger">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 7H26H4ZM4 15H26H4ZM4 23H26H4Z" fill="black" />
@@ -59,23 +59,12 @@
     </header>
 </div>
 
+<div class="container-fluid border-bottom border-2 border-dark"></div>
 
-<div class="dropdown">
-    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Dropdown link
-    </a>
 
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-</div>
-
-<nav class="collapse" id="hamburger">
+<nav class="collapse border-bottom border-2 border-dark mb-4" id="hamburger">
     <div class="container">
-        <ul class="text-end">
+        <ul class="text-start">
             <li class="my-3">
                 <a href="" class="nav-hover fs-18">
                     <i class="p-1 icofont-file-alt">
@@ -95,7 +84,7 @@
         <main class="container pt-6 pt-sm-6 pt-md-8 pt-lg-15 wrapper mb-15">
             <div class="row">
                 <div class="col-lg-4 m-auto mb-4">
-                    <div class="mb-4 d-flex justify-content-center">
+                    <div class="toggle-logo mb-4 d-flex justify-content-center">
                         <img src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                             alt="LOGO圖案">
                     </div>
@@ -142,3 +131,16 @@
 </body>
 
 </html>
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const h2 = document.querySelector("h2");
+    const logo = document.querySelector(".toggle-logo");
+
+    window.onload = function(){
+        hamburger.addEventListener("click", function(){
+            h2.classList.toggle("d-none");
+            logo.classList.toggle("d-none");
+        })
+    }
+</script>

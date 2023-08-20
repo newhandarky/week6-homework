@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>第六週作業-活動訂票網首頁</title>
-  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-64611947.js"></script>
-  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-8022c3b4.css">
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-7ffd58b4.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-ccfeec78.css">
 </head>
 
 <body>
-  <div class="container-fluid border-bottom border-2 border-dark">
+  <div class="container">
     <header class="py-3 py-md-6 d-flex justify-content-between">
         <div class="d-flex align-items-center">
             <h1 class="fs-lg-32 d-flex">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="d-flex align-items-center">
-            <button class="d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
+            <button class="hamburger d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
                 href="#hamburger" role="button" aria-expanded="false" aria-controls="hamburger">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 7H26H4ZM4 15H26H4ZM4 23H26H4Z" fill="black" />
@@ -59,23 +59,12 @@
     </header>
 </div>
 
+<div class="container-fluid border-bottom border-2 border-dark"></div>
 
-<div class="dropdown">
-    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Dropdown link
-    </a>
 
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-</div>
-
-<nav class="collapse" id="hamburger">
+<nav class="collapse border-bottom border-2 border-dark mb-4" id="hamburger">
     <div class="container">
-        <ul class="text-end">
+        <ul class="text-start">
             <li class="my-3">
                 <a href="" class="nav-hover fs-18">
                     <i class="p-1 icofont-file-alt">
@@ -167,7 +156,7 @@
         </div>
 
         <div id="recent"
-          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3">
+          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3" data-aos="fade-left">
           <a class="fs-24 fs-sm-32 fs-md-48 fs-lg-64 nav-hover" href="">RECENT</a>
           <a class="fs-16 fs-sm-20 fs-md-24 fs-lg-32 fw-bold nav-hover" href="events.html">近期活動</a>
         </div>
@@ -175,7 +164,7 @@
         <div class="card__list">
           <ul class="row">
             <li class="col-lg-6 col-xl-4 mb-6 mb-md-12 d-flex">
-              <div class="card border-0">
+              <div class="card border-0" data-aos="fade-up">
                 <h3 class="fs-32 fs-sm-40 fs-md-48 mb-2 mb-lg-3">19 MAY 2023</h3>
                 <div class="card-body border border-3 border-dark border-end-0 border-start-0 py-4 pt-md-3 px-0">
                   <a href="single_event.html">
@@ -205,7 +194,7 @@
               </div>
             </li>
             <li class="col-lg-6 col-xl-4 mb-6 mb-md-12 d-flex">
-              <div class="card border-0">
+              <div class="card border-0" data-aos="fade-up">
                 <h3 class="fs-32 fs-sm-40 fs-md-48 mb-2 mb-lg-3">23 MAY 2023</h3>
                 <div class="card-body border border-3 border-dark border-end-0 border-start-0 py-4 pt-md-3 px-0">
                   <a href="single_event.html">
@@ -214,7 +203,8 @@
                       alt="活動圖片2">
                   </a>
                   <h4 class="card-title fs-18 fs-md-24 mb-md-3">怪舞俱樂部</h4>
-                  <p class="card-text noto-sens-TC">覺得自己的舞蹈細胞異於常人？每次隨著音樂起舞身邊的人總是露出無法理解的表情？來這裡就對了！來參加這場一起跳舞的聚會，也會在每一次的舞會中選出舞步最怪的...
+                  <p class="card-text noto-sens-TC">
+                    覺得自己的舞蹈細胞異於常人？每次隨著音樂起舞身邊的人總是露出無法理解的表情？來這裡就對了！來參加這場一起跳舞的聚會，也會在每一次的舞會中選出舞步最怪的...
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -223,7 +213,8 @@
                       src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                       alt="閃光效果圖片">
                     演出</a>
-                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal" data-bs-target="#joinMember">檢視活動
+                  <a class="d-flex align-items-center noto-sens-TC fw-bold" href="" data-bs-toggle="modal"
+                    data-bs-target="#joinMember">檢視活動
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
                         d="M12.6144 7.55195L9.3632 4.30075C9.1152 4.05275 8.7136 4.05275 8.4656 4.30075L8.1856 4.58075C7.9376 4.82875 7.9376 5.23035 8.1856 5.47835L10.2608 7.55355C10.3856 7.67835 10.4464 7.83995 10.4464 8.00155C10.4464 8.16315 10.384 8.32635 10.2608 8.44955L8.1856 10.5247C7.9376 10.7727 7.9376 11.1743 8.1856 11.4223L8.4656 11.7023C8.7136 11.9471 9.1152 11.9471 9.3632 11.6991L12.6144 8.44795C12.7392 8.32315 12.8 8.16155 12.8 7.99995C12.8 7.83835 12.7376 7.67515 12.6144 7.55195ZM7.8144 7.55195L4.5632 4.30075C4.3152 4.05275 3.9136 4.05275 3.6656 4.30075L3.3856 4.58075C3.1376 4.82875 3.1376 5.23035 3.3856 5.47835L5.4608 7.55355C5.5856 7.67835 5.6464 7.83995 5.6464 8.00155C5.6464 8.16315 5.584 8.32635 5.4608 8.44955L3.3856 10.5247C3.1376 10.7727 3.1376 11.1743 3.3856 11.4223L3.6656 11.7023C3.9136 11.9471 4.3152 11.9471 4.5632 11.6991L7.8144 8.44795C7.9392 8.32315 8 8.16155 8 7.99995C8 7.83835 7.9376 7.67515 7.8144 7.55195Z"
@@ -234,7 +225,7 @@
               </div>
             </li>
             <li class="col-lg-6 col-xl-4 mb-6 mb-md-12 d-flex">
-              <div class="card border-0">
+              <div class="card border-0" data-aos="fade-up">
                 <h3 class="fs-32 fs-sm-40 fs-md-48 mb-2 mb-lg-3">30 MAY 2023</h3>
                 <div class="card-body border border-3 border-dark border-end-0 border-start-0 py-4 pt-md-3 px-0">
                   <a href="single_event.html">
@@ -243,7 +234,8 @@
                       alt="活動圖片3">
                   </a>
                   <h4 class="card-title fs-18 fs-md-24 mb-md-3">哈利波特馬拉松</h4>
-                  <p class="card-text noto-sens-TC">每次身邊有人開啟哈利波特的話題，自己永遠都是聽不懂的那個麻瓜？看大家在討論魁地奇、用咒語鬥法的時候，自己永遠是陪笑的那個人？穿好你的法袍、帶上你的法杖...
+                  <p class="card-text noto-sens-TC">
+                    每次身邊有人開啟哈利波特的話題，自己永遠都是聽不懂的那個麻瓜？看大家在討論魁地奇、用咒語鬥法的時候，自己永遠是陪笑的那個人？穿好你的法袍、帶上你的法杖...
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -264,7 +256,7 @@
               </div>
             </li>
             <li class="col-lg-6 col-xl-4 mb-6 mb-md-12 d-flex">
-              <div class="card border-0">
+              <div class="card border-0" data-aos="fade-up">
                 <h3 class="fs-32 fs-sm-40 fs-md-48 mb-2 mb-lg-3">12 June 2023</h3>
                 <div class="card-body border border-3 border-dark border-end-0 border-start-0 py-4 pt-md-3 px-0">
                   <a href="single_event.html">
@@ -273,7 +265,8 @@
                       alt="活動圖片4">
                   </a>
                   <h4 class="card-title fs-18 fs-md-24 mb-md-3">皮卡丘排球大賽</h4>
-                  <p class="card-text noto-sens-TC">還記得小時候玩的小遊戲嗎？總是有朋友吹噓自己獨孤求敗、只求一敗？是時候該展現真正的實力了！本活動採用瑞士制賽程，以絕對公平的方式進行，是時候該證明自己...
+                  <p class="card-text noto-sens-TC">
+                    還記得小時候玩的小遊戲嗎？總是有朋友吹噓自己獨孤求敗、只求一敗？是時候該展現真正的實力了！本活動採用瑞士制賽程，以絕對公平的方式進行，是時候該證明自己...
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -294,7 +287,7 @@
               </div>
             </li>
             <li class="col-lg-6 col-xl-4 mb-6 mb-md-12 d-flex">
-              <div class="card border-0">
+              <div class="card border-0" data-aos="fade-up">
                 <h3 class="fs-32 fs-sm-40 fs-md-48 mb-2 mb-lg-3">25 June 2023</h3>
                 <div class="card-body border border-3 border-dark border-end-0 border-start-0 py-4 pt-md-3 px-0">
                   <a href="single_event.html">
@@ -303,7 +296,8 @@
                       alt="活動圖片5">
                   </a>
                   <h4 class="card-title fs-18 fs-md-24 mb-md-3">酒精路跑</h4>
-                  <p class="card-text noto-sens-TC">身邊總是有對自己酒量有高度自信的朋友嗎？拉著他/她一起來參加酒精路跑吧！一起拍下第一杯直到倒下為止的照片，一起喝遍市區內各家極具品味的酒吧。
+                  <p class="card-text noto-sens-TC">
+                    身邊總是有對自己酒量有高度自信的朋友嗎？拉著他/她一起來參加酒精路跑吧！一起拍下第一杯直到倒下為止的照片，一起喝遍市區內各家極具品味的酒吧。
                   </p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
@@ -324,7 +318,7 @@
               </div>
             </li>
             <li class="col-lg-6 col-xl-4 mb-6 mb-md-12 d-flex">
-              <div class="card border-0">
+              <div class="card border-0" data-aos="fade-up">
                 <h3 class="fs-32 fs-sm-40 fs-md-48 mb-2 mb-lg-3">9 July 2023</h3>
                 <div class="card-body border border-3 border-dark border-end-0 border-start-0 py-4 pt-md-3 px-0">
                   <a href="single_event.html">
@@ -333,7 +327,8 @@
                       alt="活動圖片6">
                   </a>
                   <h4 class="card-title fs-18 fs-md-24 mb-md-3">展覽——我的房間</h4>
-                  <p class="card-text noto-sens-TC">每個人的房間總會有那麼一兩個能代表自己的物事，或許是再平凡不過的牙刷、馬克杯，或許有那些別人的房間從沒出現過的小東西——那些能定義自己的特別的東西。</p>
+                  <p class="card-text noto-sens-TC">
+                    每個人的房間總會有那麼一兩個能代表自己的物事，或許是再平凡不過的牙刷、馬克杯，或許有那些別人的房間從沒出現過的小東西——那些能定義自己的特別的東西。</p>
                 </div>
                 <div class="py-2 py-md-3 d-flex justify-content-between border-bottom border-dark border-3">
                   <a class="fw-bold" href="">
@@ -356,14 +351,14 @@
         </div>
 
         <div
-          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3">
+          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3" data-aos="fade-right">
           <a class="fs-24 fs-sm-32 fs-md-48 fs-lg-64 nav-hover" href="">ONLINE</a>
           <a class="fs-16 fs-sm-20 fs-md-24 fs-lg-32 fw-bold nav-hover" href="">線上活動</a>
         </div>
 
         <div class="row mb-8 mb-lg-10">
           <div class="col-lg-7 mb-3 mb-lg-0 d-flex">
-            <div class="chatGpt img-hover w-100"></div>
+            <div class="chatGpt img-hover w-100" data-aos="zoom-in"></div>
           </div>
           <div class="col-lg-5">
             <h4 class="f-18 mb-2 mb-lg-8">切特居批踢</h4>
@@ -397,7 +392,8 @@
             <p class="mb-3 mb-lg-8 noto-sens-TC">最近網路上很流行的AI程式 ChatGPT，可以用來聊天或是查詢、整理各種資料，不同的應用方式如雨後春筍般冒出來。
               這個活動讓大家把自己最有特色的使用方法提出來讓大家參考，也會投票出最有趣的用法。
               該讓其他人知道自己使用 ChatGPT 的姿勢才是最特別的那個了！</p>
-            <button class="noto-sens-TC btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex align-items-center justify-content-center">查看活動詳情
+            <button
+              class="noto-sens-TC btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex align-items-center justify-content-center">查看活動詳情
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 class="hover-d-none">
                 <path
@@ -421,10 +417,9 @@
 </div>
         <div class="container mb-10 mb-lg-15">
           <ul class="row card__event">
-            <li class="col-md-6 col-xl-3 card border-0 mb-10 mb-xl-0">
+            <li id="rotation1" class="col-md-6 col-xl-3 card border-0 mb-10 mb-xl-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
-                <h3
-                  class="fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
+                <h3 class="fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
                   社群活動</h3>
                 <img class="card__item__photo img-hover img-fluid w-100 mb-3 mb-lg-4"
                   src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/album/01.jpg?raw=true"
@@ -432,7 +427,7 @@
                 <p class="fs-18 fw-bold mb-4 mb-md-8">無聲派對-閉閉嘴dancing</p>
               </div>
             </li>
-            <li class="col-md-6 col-xl-3 card border-0 mb-10 mb-xl-0">
+            <li id="rotation2" class="col-md-6 col-xl-3 card border-0 mb-10 mb-xl-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
                 <h3
                   class="noto-sens-TC fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
@@ -443,7 +438,7 @@
                 <p class="fs-18 fw-bold mb-4 mb-md-8">拯救老店大作戰</p>
               </div>
             </li>
-            <li class="col-md-6 col-xl-3 card border-0 mb-10 mb-md-0">
+            <li id="rotation3" class="col-md-6 col-xl-3 card border-0 mb-10 mb-md-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
                 <h3
                   class="noto-sens-TC fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
@@ -454,7 +449,7 @@
                 <p class="fs-18 fw-bold mb-4 mb-md-8">內觀修行-部落篇</p>
               </div>
             </li>
-            <li class="col-md-6 col-xl-3 card border-0">
+            <li id="rotation4" class="col-md-6 col-xl-3 card border-0">
               <div class="border border-dark card__item p-3 p-md-4 position-relative">
                 <h3
                   class="noto-sens-TC fs-16 py-2 px-4 bg-white position-absolute top-0 start-50 translate-middle h3-transform">
@@ -516,7 +511,8 @@
                     <input type="email" name="" id="" placeholder="輸入Email"
                       class="noto-sens-TC py-4 ps-6 w-100 border-dark border-2 bg-bg-color mb-4">
                   </div>
-                  <button class="noto-sens-TC btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex justify-content-center align-items-center">
+                  <button
+                    class="noto-sens-TC btn-hover link-hover w-100 py-4 py-lg-2 btn btn-dark d-flex justify-content-center align-items-center">
                     確認訂閱
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       class="hover-d-none">
@@ -567,8 +563,87 @@
     </p>
 </footer>
 
-
+        <script src="../js/aos/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         
 </body>
 
 </html>
+
+<script>
+  const rotation1 = document.querySelector("#rotation1");
+  const rotation2 = document.querySelector("#rotation2");
+  const rotation3 = document.querySelector("#rotation3");
+  const rotation4 = document.querySelector("#rotation4");
+
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 150, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 800, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+  });
+  
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(rotation1, {
+    duration: 1,
+    rotation: 360,
+    ease: "back.out",
+    scrollTrigger:{
+      trigger: rotation1,
+      toggleActions: "restart none none none",
+      start: "top 80%"
+    } 
+  })
+  gsap.to(rotation2, {
+    duration: 1,
+    rotation: 362,
+    ease: "back.out",
+    delay:0.2,
+    scrollTrigger:{
+      trigger: rotation2,
+      toggleActions: "restart none none none",
+      start: "top 80%"
+    } 
+  })
+  gsap.to(rotation3, {
+    duration: 1,
+    rotation: 358,
+    ease: "back.out",
+    delay:0.4,
+    scrollTrigger:{
+      trigger: rotation3,
+      toggleActions: "restart none none none",
+      start: "top 80%"
+    } 
+  })
+  gsap.to(rotation4, {
+    duration: 1,
+    rotation: 362,
+    ease: "back.out",
+    delay:0.6,
+    scrollTrigger:{
+      trigger: rotation4,
+      toggleActions: "restart none none none",
+      start: "top 80%"
+    } 
+  })
+
+</script>

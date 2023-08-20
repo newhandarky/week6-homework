@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第六週作業-活動訂票網-付款頁面</title>
-  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-64611947.js"></script>
-  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-8022c3b4.css">
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-7ffd58b4.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-ccfeec78.css">
 </head>
 
 <body>
-    <div class="container-fluid border-bottom border-2 border-dark">
+    <div class="container">
     <header class="py-3 py-md-6 d-flex justify-content-between">
         <div class="d-flex align-items-center">
             <h1 class="fs-lg-32 d-flex">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="d-flex align-items-center">
-            <button class="d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
+            <button class="hamburger d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
                 href="#hamburger" role="button" aria-expanded="false" aria-controls="hamburger">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 7H26H4ZM4 15H26H4ZM4 23H26H4Z" fill="black" />
@@ -59,23 +59,12 @@
     </header>
 </div>
 
+<div class="container-fluid border-bottom border-2 border-dark"></div>
 
-<div class="dropdown">
-    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Dropdown link
-    </a>
 
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-</div>
-
-<nav class="collapse" id="hamburger">
+<nav class="collapse border-bottom border-2 border-dark mb-4" id="hamburger">
     <div class="container">
-        <ul class="text-end">
+        <ul class="text-start">
             <li class="my-3">
                 <a href="" class="nav-hover fs-18">
                     <i class="p-1 icofont-file-alt">
@@ -93,42 +82,59 @@
 </nav>
         <main class="container-fluid pt-6 pt-md-15">
             <div class="col-md-6 m-auto">
+                
                 <div class="d-flex justify-content-between py-4 py-md-2 noto-Serif-TC">
-                    <div
-                        class="border-dark border ms-4 ms-md-2 step-box d-flex align-items-center justify-content-center active">
-                        <span class="fs-md-20">1</span>
-                    </div>
-                    <div class="w-100 position-relative">
-                        <div
-                            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
-                        </div>
-                    </div>
-                    <div class="border-dark border step-box d-flex align-items-center justify-content-center active">
-                        <span class="fs-md-20">2</span>
-                    </div>
-                    <div class="w-100 position-relative">
-                        <div
-                            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
-                        </div>
-                    </div>
-                    <div
-                        class="border-dark border me-4 me-md-2 step-box d-flex align-items-center justify-content-center">
-                        <span class="fs-md-20">3</span>
-                    </div>
-                </div>
+    <div
+        class="border-dark border ms-4 ms-md-2 step-box d-flex align-items-center justify-content-center active">
+        <span class="fs-md-20">1</span>
+    </div>
+    <div class="w-100 position-relative">
+        <div
+            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
+        </div>
+    </div>
+    <div id="step-2" class="border-dark border step-box d-flex align-items-center justify-content-center">
+        <span class="fs-md-20">2</span>
+    </div>
+    <div class="w-100 position-relative">
+        <div
+            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
+        </div>
+    </div>
+    <div id="step-3"
+        class="border-dark border me-4 me-md-2 step-box d-flex align-items-center justify-content-center">
+        <span class="fs-md-20">3</span>
+    </div>
+</div>
 
-                <div class="d-flex justify-content-between mb-6 mb-sm-8 mb-md-10 mb-lg-12">
-                    <div class="mb-1 mb-md 2">
-                        <span class="fw-bold">訂單確認</span>
-                    </div>
-                    <div class="mb-1 mb-md 2">
-                        <span class="fw-bold">結帳付款</span>
-                    </div>
-                    <div class="mb-1 mb-md 2">
-                        <span class="fw-bold">訂購結果</span>
-                    </div>
-                </div>
+<div class="d-flex justify-content-between mb-6 mb-sm-8 mb-md-10 mb-lg-12">
+    <div class="mb-1 mb-md 2">
+        <span class="fw-bold">訂單確認</span>
+    </div>
+    <div class="mb-1 mb-md 2">
+        <span class="fw-bold">結帳付款</span>
+    </div>
+    <div class="mb-1 mb-md 2">
+        <span class="fw-bold">訂購結果</span>
+    </div>
+</div>
 
+<script>
+    const step2 = document.querySelector("#step-2"); 
+    const step3 = document.querySelector("#step-3"); 
+    const pages = location.pathname.split("/");
+    const thisPage = pages[pages.length -1].split(".");
+
+    let render = function(step){
+        step.classList.add("active");
+    }
+
+    window.onload = function(){
+        if(thisPage[0] !== "checkout"){
+            thisPage[0] === "payment" ? render(step2) : render(step3),render(step2);
+        }
+    }
+</script>
                 <div class="mb-8 mb-md-10 md-lg-12">
                     <h2 class="fs-32 fs-md-40 fs-lg-48 fw-bold text-start text-md-center mb-6 mb-md-8">返老還童-制服聯誼</h2>
                     <div class="row mb-6 mb-md-8">
