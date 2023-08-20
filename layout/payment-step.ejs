@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-between py-4 py-md-2 noto-Serif-TC">
+    <div
+        class="border-dark border ms-4 ms-md-2 step-box d-flex align-items-center justify-content-center active">
+        <span class="fs-md-20">1</span>
+    </div>
+    <div class="w-100 position-relative">
+        <div
+            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
+        </div>
+    </div>
+    <div id="step-2" class="border-dark border step-box d-flex align-items-center justify-content-center">
+        <span class="fs-md-20">2</span>
+    </div>
+    <div class="w-100 position-relative">
+        <div
+            class="border border-dark border-1 position-absolute w-100 translate-middle top-50 start-50">
+        </div>
+    </div>
+    <div id="step-3"
+        class="border-dark border me-4 me-md-2 step-box d-flex align-items-center justify-content-center">
+        <span class="fs-md-20">3</span>
+    </div>
+</div>
+
+<div class="d-flex justify-content-between mb-6 mb-sm-8 mb-md-10 mb-lg-12">
+    <div class="mb-1 mb-md 2">
+        <span class="fw-bold">訂單確認</span>
+    </div>
+    <div class="mb-1 mb-md 2">
+        <span class="fw-bold">結帳付款</span>
+    </div>
+    <div class="mb-1 mb-md 2">
+        <span class="fw-bold">訂購結果</span>
+    </div>
+</div>
+
+<script>
+    const step2 = document.querySelector("#step-2"); 
+    const step3 = document.querySelector("#step-3"); 
+    const pages = location.pathname.split("/");
+    const thisPage = pages[pages.length -1].split(".");
+
+    let render = function(step){
+        step.classList.add("active");
+    }
+
+    window.onload = function(){
+        if(thisPage[0] !== "checkout"){
+            thisPage[0] === "payment" ? render(step2) : render(step3),render(step2);
+        }
+    }
+</script>

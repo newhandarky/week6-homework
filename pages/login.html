@@ -15,7 +15,7 @@
         <main class="container pt-6 pt-sm-6 pt-md-8 pt-lg-15 wrapper mb-15">
             <div class="row">
                 <div class="col-lg-4 m-auto mb-4">
-                    <div class="mb-4 d-flex justify-content-center">
+                    <div class="toggle-logo mb-4 d-flex justify-content-center">
                         <img src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
                             alt="LOGO圖案">
                     </div>
@@ -57,3 +57,16 @@
 </body>
 
 </html>
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const h2 = document.querySelector("h2");
+    const logo = document.querySelector(".toggle-logo");
+
+    window.onload = function(){
+        hamburger.addEventListener("click", function(){
+            h2.classList.toggle("d-none");
+            logo.classList.toggle("d-none");
+        })
+    }
+</script>
