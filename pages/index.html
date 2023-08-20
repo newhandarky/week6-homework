@@ -87,7 +87,8 @@
         </div>
 
         <div id="recent"
-          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3" data-aos="fade-left">
+          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3"
+          data-aos="fade-left">
           <a class="fs-24 fs-sm-32 fs-md-48 fs-lg-64 nav-hover" href="">RECENT</a>
           <a class="fs-16 fs-sm-20 fs-md-24 fs-lg-32 fw-bold nav-hover" href="events.html">近期活動</a>
         </div>
@@ -282,7 +283,8 @@
         </div>
 
         <div
-          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3" data-aos="fade-right">
+          class="d-flex justify-content-between align-items-center py-4 px-3 py-sm-5 px-sm-6 py-md-6 px-md-8 mb-6 mb-md-8 border border-dark border-3"
+          data-aos="fade-right">
           <a class="fs-24 fs-sm-32 fs-md-48 fs-lg-64 nav-hover" href="">ONLINE</a>
           <a class="fs-16 fs-sm-20 fs-md-24 fs-lg-32 fw-bold nav-hover" href="">線上活動</a>
         </div>
@@ -468,7 +470,7 @@
     <%- include('./layout/modal'); -%>
 
       <%- include('./layout/footer'); -%>
-        <script src="../js/aos/aos.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script type="module" src="../main.js"></script>
@@ -504,51 +506,51 @@
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
   });
-  
+
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(rotation1, {
     duration: 1,
     rotation: 360,
     ease: "back.out",
-    scrollTrigger:{
+    scrollTrigger: {
       trigger: rotation1,
       toggleActions: "restart none none none",
       start: "top 80%"
-    } 
+    }
   })
   gsap.to(rotation2, {
     duration: 1,
     rotation: 362,
     ease: "back.out",
-    delay:0.2,
-    scrollTrigger:{
+    delay: 0.2,
+    scrollTrigger: {
       trigger: rotation2,
       toggleActions: "restart none none none",
       start: "top 80%"
-    } 
+    }
   })
   gsap.to(rotation3, {
     duration: 1,
     rotation: 358,
     ease: "back.out",
-    delay:0.4,
-    scrollTrigger:{
+    delay: 0.4,
+    scrollTrigger: {
       trigger: rotation3,
       toggleActions: "restart none none none",
       start: "top 80%"
-    } 
+    }
   })
   gsap.to(rotation4, {
     duration: 1,
     rotation: 362,
     ease: "back.out",
-    delay:0.6,
-    scrollTrigger:{
+    delay: 0.6,
+    scrollTrigger: {
       trigger: rotation4,
       toggleActions: "restart none none none",
       start: "top 80%"
-    } 
+    }
   })
 
 </script>
