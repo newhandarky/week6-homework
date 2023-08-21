@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>第六週作業-活動訂票網首頁</title>
-  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-7ffd58b4.js"></script>
-  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-ccfeec78.css">
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-e0fab498.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-0a416834.css">
 </head>
 
 <body>
@@ -602,50 +602,55 @@
 
   });
 
-  gsap.registerPlugin(ScrollTrigger);
+  
+  window.onload = function(){
+    
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(rotation1, {
+      duration: 1,
+      rotation: 360,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: rotation1,
+        toggleActions: "restart none none none",
+        start: "top 80%"
+      }
+    })
+    gsap.to(rotation2, {
+      duration: 1,
+      rotation: 362,
+      ease: "back.out",
+      delay: 0.2,
+      scrollTrigger: {
+        trigger: rotation2,
+        toggleActions: "restart none none none",
+        start: "top 80%"
+      }
+    })
+    gsap.to(rotation3, {
+      duration: 1,
+      rotation: 358,
+      ease: "back.out",
+      delay: 0.4,
+      scrollTrigger: {
+        trigger: rotation3,
+        toggleActions: "restart none none none",
+        start: "top 80%"
+      }
+    })
+    gsap.to(rotation4, {
+      duration: 1,
+      rotation: 362,
+      ease: "back.out",
+      delay: 0.6,
+      scrollTrigger: {
+        trigger: rotation4,
+        toggleActions: "restart none none none",
+        start: "top 80%"
+      }
+    })
 
-  gsap.to(rotation1, {
-    duration: 1,
-    rotation: 360,
-    ease: "back.out",
-    scrollTrigger: {
-      trigger: rotation1,
-      toggleActions: "restart none none none",
-      start: "top 80%"
-    }
-  })
-  gsap.to(rotation2, {
-    duration: 1,
-    rotation: 362,
-    ease: "back.out",
-    delay: 0.2,
-    scrollTrigger: {
-      trigger: rotation2,
-      toggleActions: "restart none none none",
-      start: "top 80%"
-    }
-  })
-  gsap.to(rotation3, {
-    duration: 1,
-    rotation: 358,
-    ease: "back.out",
-    delay: 0.4,
-    scrollTrigger: {
-      trigger: rotation3,
-      toggleActions: "restart none none none",
-      start: "top 80%"
-    }
-  })
-  gsap.to(rotation4, {
-    duration: 1,
-    rotation: 362,
-    ease: "back.out",
-    delay: 0.6,
-    scrollTrigger: {
-      trigger: rotation4,
-      toggleActions: "restart none none none",
-      start: "top 80%"
-    }
-  })
+  }
 
 </script>
