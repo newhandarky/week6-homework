@@ -18,6 +18,21 @@
     max-height: 119px;
 }
 
+.time::before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: $dark;
+    top: 50%;
+    left: 40%;
+    transform:  rotate(120deg);
+    @media (min-width: 1400px){
+        width: 100px;
+        left: 30%;
+    }
+}
+
 table{
     @media (min-width: 768px) {
         th, td{
@@ -54,3 +69,4 @@ table{
     }
 
 }
+

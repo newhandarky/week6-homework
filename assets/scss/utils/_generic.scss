@@ -129,3 +129,17 @@
         font-size: 1.125rem;
     }
 }
+@media (min-width: 1200px) {
+    @for $i from 0 through 12 {
+        .fs-xl-#{$i*4 + 16} {
+            font-size: 1rem + ($i * 0.25rem);
+        }
+    }
+}
+@media (min-width: 1400px) {
+    @for $i from 0 through 12 {
+        .fs-xxl-#{$i*4 + 16} {
+            font-size: 1rem + ($i * 0.25rem);
+        }
+    }
+}
