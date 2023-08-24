@@ -11,27 +11,29 @@
 <body>
     <%- include('./layout/header'); -%>
 
-        <main class="container-fluid pt-6 pt-md-15">
+        <main class="container pt-6 pt-md-15">
             <div class="row">
                 <div class="col-md-6 m-auto">                
                     <%- include('./layout/payment-step'); -%>    
                     <div class="mb-8 mb-md-10 md-lg-12">
                         <h2 class="fs-32 fs-md-40 fs-lg-48 fw-bold text-start text-md-center mb-6 mb-md-8">返老還童-制服聯誼</h2>
-                        <div class="row mb-6 mb-md-8">
-                            <h3 class="fs-14 fs-md-16 noto-sens-TC fw-normal bg-dark text-warning p-2 px-md-3 text-center">
+                        <div class="mb-6 mb-md-8">
+                            <p class="fs-14 fs-md-16 noto-sens-TC fw-normal bg-dark text-warning p-2 px-md-3 text-center lh-base minus-m-19">
                                 您的訂單已保留，請在2023/5/30 04:32 前完成繳費。若逾期未繳款，系統將取消您的訂單。
-                            </h3>
-                        </div>
-                        <div class="border-top border-3 border-dark noto-Serif-TC">
-                            <p class="d-flex justify-content-between py-4 py-md-2 border-bottom border-dark">
-                                <span class="fw-bold">訂單編號</span>
-                                <span class="noto-sens-TC">892746123</span>
-                            </p>
-                            <p class="d-flex justify-content-between py-4 py-md-2 border-bottom border-dark">
-                                <span class="fw-bold">票券</span>
-                                <span class="noto-sens-TC">改頭換面票（含大改造）</span>
                             </p>
                         </div>
+                        <table class="table border-top border-3 border-dark  Noto-Serif-TC">
+                            <tbody>
+                                <tr>
+                                    <th class="fw-bold">訂單編號</th>
+                                    <td class="noto-sens-TC text-end">892746123</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-bold">票券</th>
+                                    <td class="noto-sens-TC text-end w-75">改頭換面票（含大改造）</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
     
                     <div class="mb-12 mb-md-15">

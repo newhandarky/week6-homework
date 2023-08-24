@@ -1,10 +1,14 @@
-.page-link{
-    &:hover{
-        background: $dark;
-        color: $warning;
-    }
+/*------------------------------------*\
+    hover效果
+\*------------------------------------*/
+.page-link:hover{
+    background: $dark;
+    color: $warning;
 }
 
+/*------------------------------------*\
+    顏色, 背景相關
+\*------------------------------------*/
 .thisPage{
     background: $dark;
     color: $warning;

@@ -1,3 +1,6 @@
+/*------------------------------------*\
+    顏色, 背景相關
+\*------------------------------------*/
 .block__1 {
     background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/13.jpg?raw=true");
     @include bg-img-cover;
@@ -5,6 +8,16 @@
 
 }
 
+.chatGpt {
+    @include bg-img-cover;
+    background-position: center 34%;
+    background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/online.jpg?raw=true");
+    min-height: 174px
+}
+
+/*------------------------------------*\
+    圖片設定相關
+\*------------------------------------*/
 .spark {
     width: 24px;
     height: 24px;
@@ -17,18 +30,6 @@
     }
 }
 
-.chatGpt {
-    @include bg-img-cover;
-    background-position: center 34%;
-    background-image: url("https://github.com/newhandarky/week6-homework/blob/main/assets/images/event/online.jpg?raw=true");
-    min-height: 174px
-}
-
-.font-jump{
-    &:hover{
-        animation: bounce 1s 1;
-    }
-}
 
 .card__item {
     &__photo {
@@ -37,11 +38,17 @@
     }
 }
 
-// 區塊傾斜效果
-.h3-transform {
-    transform: translate(-50%, -50%) rotate(-4deg);
+.card__list {
+    &__photo{
+        object-fit: cover;
+        width: 100%;
+        height: 210px;
+    }
 }
 
+/*------------------------------------*\
+    卡片傾斜效果
+\*------------------------------------*/
 .card__event {
 
     li {
@@ -55,11 +62,21 @@
     }
 }
 
-.card__list {
-    &__photo{
-        object-fit: cover;
-        width: 100%;
-        height: 210px;
+/*------------------------------------*\
+    hover效果相關
+\*------------------------------------*/
+.hover-circle{
+    position: relative;
+    z-index: 1;
+    &:hover::after{
+        content: "";
+        position: absolute;
+        background-color: #FBFF22;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        left: -10px;
+        z-index: -1;
     }
 }
 
@@ -71,27 +88,39 @@
     a:hover{
         color: $dark-hover;
     }
-    .link-mail{
-        &:hover::after{
+    .link-mail:hover::after{
             content: " 歡迎您的來信";
-        }
     }
-    .link-tel{
-        &:hover::after{
-            content: " 歡迎您的來電";
-        }
+    
+    .link-tel:hover::after{
+            content: " 歡迎您的來電";        
     }
-    .link-facebook{
-        &:hover::after{
-            content: " 歡迎您來按讚";
-        }
+    .link-facebook:hover::after{
+            content: " 歡迎您來按讚";        
     }
 }
+
+/*------------------------------------*\
+    動畫效果相關
+\*------------------------------------*/
 
 // 修正滑入特效時產生的X軸
 .overflow-x-hidden{
     overflow-y: hidden;
 }
+
+// 區塊傾斜效果
+.h3-transform {
+    transform: translate(-50%, -50%) rotate(-4deg);
+}
+
+.font-jump:hover{
+        animation: bounce 1s 1;    
+}
+
+/*------------------------------------*\
+    RWD相關
+\*------------------------------------*/
 
 @media (min-width: 576px) {
     .event {

@@ -1,5 +1,7 @@
-// 跑馬燈動畫效果
-.scroll {
+/*------------------------------------*\
+    動畫效果
+\*------------------------------------*/
+.scroll { // 跑馬燈動畫效果
     &__text {
         white-space: nowrap;
         animation: scroll1 20s linear infinite;

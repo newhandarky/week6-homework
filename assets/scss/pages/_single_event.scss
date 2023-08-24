@@ -1,3 +1,6 @@
+/*------------------------------------*\
+    圖片相關
+\*------------------------------------*/
 .photo {
     max-height: 550px;
     overflow: hidden;
@@ -5,28 +8,21 @@
     object-position: center center;
 }
 
-.diagonal-line {
-    width: 50px;
-    height: 0;
-    transform: rotate(-60deg);
-    @media (min-width: 1200px) {
-        width: 75px;
-    }
-}
-
+/*------------------------------------*\
+    其他
+\*------------------------------------*/
 .event__date{
     max-height: 119px;
 }
 
-.detail__date-line::before{
-    content: "";
-    position: absolute;
+/*------------------------------------*\
+    RWD相關
+\*------------------------------------*/
+.detail__date-line {
     width: 50px;
     height: 2px;
     background-color: $dark;
-    top: 50%;
-    left: 40%;
-    transform:  rotate(120deg);
+    transform: rotate(-60deg);
     @media (min-width: 576px){
         left: 45%;
     }
@@ -37,6 +33,12 @@
         width: 100px;
         left: 30%;
     }
+}
+
+@media (min-width: 1400px) {
+    .date-height{
+        line-height: 1.1;
+    }    
 }
 
 table{

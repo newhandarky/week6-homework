@@ -1,27 +1,6 @@
-.link-bg-hover {
-    &:hover {
-        background: $warning;
-
-        p {
-            animation: bounce 1s 1;
-        }
-    }
-}
-
-.wrapper {
-    flex-grow: 1;
-    /*可佔滿垂直剩餘的空間*/
-}
-
-.noto-Serif-TC {
-    font-family: 'Noto Serif TC', serif;
-}
-
-.noto-sens-TC {
-    font-family: 'Noto Sans TC', sans-serif;
-}
-
-// 文字跳動效果
+/*------------------------------------*\
+    動畫效果
+\*------------------------------------*/
 @keyframes bounce {
 
     0%,
@@ -34,14 +13,21 @@
     }
 }
 
-.nav-hover {
+/*------------------------------------*\
+    hover相關
+\*------------------------------------*/
+.link-bg-hover {
     &:hover {
-        color: $dark-hover;
+        background: $warning;
+
+        p {
+            animation: bounce 1s 1;
+        }
     }
 }
 
-.left-border {
-    border: 2px solid $dark;
+.nav-hover:hover {
+    color: $dark-hover;
 }
 
 .link-hover {
@@ -55,15 +41,8 @@
     }
 }
 
-.img-hover {
-    &:hover {
-        opacity: 0.7;
-    }
-}
-
-.active {
-    background: $dark;
-    color: $warning;
+.img-hover:hover {
+    opacity: 0.7;
 }
 
 .hover-d-inline {
@@ -82,7 +61,69 @@
     }
 }
 
-// 字體大小
+/*------------------------------------*\
+    顏色, 背景色相關
+\*------------------------------------*/
+.active {
+    background: $dark;
+    color: $warning;
+}
+
+.bg-EBEAE8{
+    background: #EBEAE8;
+}
+
+/*------------------------------------*\
+    通過驗證樣式
+\*------------------------------------*/
+.was-validated .form-control:valid,
+.was-validated .form-control:valid:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+/*------------------------------------*\
+    未通過驗證樣式
+\*------------------------------------*/
+.was-validated .form-control:invalid,
+.was-validated .form-control:invalid:focus {
+    background-color: #F3F1E5;
+}
+
+/*------------------------------------*\
+    其他
+\*------------------------------------*/
+.minus-m-19{
+    @media (min-width: 768px) {
+    margin-right: -19px;
+    margin-left: -19px;
+    }
+}
+
+.max-w-100{
+    max-width: 100px;
+}
+
+.left-border {
+    border: 2px solid $dark;
+}
+
+.wrapper {
+    flex-grow: 1;
+    /*可佔滿垂直剩餘的空間*/
+}
+
+/*------------------------------------*\
+    文字相關
+\*------------------------------------*/
+.noto-Serif-TC {
+    font-family: 'Noto Serif TC', serif;
+}
+
+.noto-sens-TC {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
 .fs-14 {
     font-size: 0.875rem;
 }
@@ -90,7 +131,6 @@
 .fs-18 {
     font-size: 1.125rem;
 }
-
 
 @for $i from 0 through 4 {
     .fs-#{$i*4 + 16} {

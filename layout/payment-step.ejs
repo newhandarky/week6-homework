@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between py-4 py-md-2 noto-Serif-TC">
-    <div
+    <div id="step-1"
         class="border-dark border ms-4 ms-md-2 step-box d-flex align-items-center justify-content-center active">
         <span class="fs-md-20">1</span>
     </div>
@@ -35,18 +35,25 @@
 </div>
 
 <script>
+    const step1 = document.querySelector("#step-1"); 
     const step2 = document.querySelector("#step-2"); 
     const step3 = document.querySelector("#step-3"); 
     const pages = location.pathname.split("/");
     const thisPage = pages[pages.length -1].split(".");
 
+    let ste = ''
+
     let render = function(step){
         step.classList.add("active");
     }
 
+    let renderSuccess = function(step){
+        step.innerHTML = '<i class="fs-16 icofont-ui-check"></i>';
+    }
+
     window.onload = function(){
         if(thisPage[0] !== "checkout"){
-            thisPage[0] === "payment" ? render(step2) : render(step3),render(step2);
+            thisPage[0] === "payment" ? (render(step2), renderSuccess(step1)) : (render(step3), render(step2), renderSuccess(step1), renderSuccess(step2));
         }
     }
 </script>
