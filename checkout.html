@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第六週作業-活動訂票網-訂單確認頁面</title>
-  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-38ddc4c5.js"></script>
-  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-e94f59c2.css">
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-8fcc0f3f.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-50f963bf.css">
 </head>
 
 <body>
@@ -16,18 +16,18 @@
         <div class="d-flex align-items-center">
             <h1 class="fs-lg-32 d-flex">
                 <a href="index.html" class="d-flex align-items-center">
-                    <img class="logo me-6"
+                    <img class="logo me-lg-6"
                         src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/logo.png?raw=true"
                         alt="網站LOGO">
                     <span class="">7TAO </span>
                     <span class="fs-6 ms-1">活動訂票網</span>
                 </a>
             </h1>
-            <div class="d-flex">
-                <input class="ms-0 ms-lg-12 py-2 px-6 bg-bg-color" type="text" placeholder="探索活動">
-                <button class="btn btn-dark p-md-4" type="submit"><i
-                        class="p-1 icofont-search-1 text-warning"></i></button>
-            </div>
+        </div>
+        <div class="d-flex me-lg-auto">
+            <input class="ms-0 ms-lg-12 py-2 px-6 bg-bg-color" type="text" placeholder="探索活動">
+            <button class="btn btn-dark p-md-4" type="submit"><i
+                    class="p-1 icofont-search-1 text-warning"></i></button>
         </div>
         <div class="d-flex align-items-center">
             <button class="hamburger d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
@@ -80,11 +80,11 @@
         </ul>
     </div>
 </nav>
-        <main class="container-fluid pt-6 pt-md-15">
+        <main class="container pt-6 pt-md-15">
             <div class="row">
-                <div class="col-md-6 m-auto">                    
+                <div class="col-md-6 m-auto">
                     <div class="d-flex justify-content-between py-4 py-md-2 noto-Serif-TC">
-    <div
+    <div id="step-1"
         class="border-dark border ms-4 ms-md-2 step-box d-flex align-items-center justify-content-center active">
         <span class="fs-md-20">1</span>
     </div>
@@ -120,77 +120,109 @@
 </div>
 
 <script>
+    const step1 = document.querySelector("#step-1"); 
     const step2 = document.querySelector("#step-2"); 
     const step3 = document.querySelector("#step-3"); 
     const pages = location.pathname.split("/");
     const thisPage = pages[pages.length -1].split(".");
 
+    let ste = ''
+
     let render = function(step){
         step.classList.add("active");
     }
 
+    let renderSuccess = function(step){
+        step.innerHTML = '<i class="fs-16 icofont-ui-check"></i>';
+    }
+
     window.onload = function(){
         if(thisPage[0] !== "checkout"){
-            thisPage[0] === "payment" ? render(step2) : render(step3),render(step2);
+            thisPage[0] === "payment" ? (render(step2), renderSuccess(step1)) : (render(step3), render(step2), renderSuccess(step1), renderSuccess(step2));
         }
     }
-</script>    
-                    <div class="mb-8 mb-md-10 md-lg-12">
-                        <h2 class="fs-32 fs-md-40 fs-lg-48 fw-bold text-start text-md-center mb-6 mb-md-8">返老還童-制服聯誼</h2>
-                        <div class="border-top border-3 border-dark Noto-Serif-TC">
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">日期</span>
-                                <span class="noto-sens-TC">2023/5/12</span>
-                            </p>
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">票種</span>
-                                <span class="noto-sens-TC">改頭換面票（含大改造）</span>
-                            </p>
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">票價</span>
-                                <span class="noto-sens-TC">$8000</span>
-                            </p>
+</script>                        <div class="mb-8 mb-md-10 md-lg-12">
+                            <h2 class="fs-32 fs-md-40 fs-lg-48 fw-bold text-start text-md-center mb-6 mb-md-8">返老還童-制服聯誼
+                            </h2>
+                            <table class="table border-top border-3 border-dark Noto-Serif-TC">
+                                <tbody>
+                                    <tr>
+                                        <th class="fw-bold">日期</th>
+                                        <td class="noto-sens-TC text-end">2023/5/12</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-bold">票種</th>
+                                        <td class="noto-sens-TC text-end w-75">改頭換面票（含大改造）</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-bold">票價</th>
+                                        <td class="noto-sens-TC text-end">$8000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </div>
-    
-                    <div class="mb-12 mb-md-15">
-                        <div class="mb-4 d-flex justify-content-center">
-                            <img src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
-                                alt="LOGO圖案">
-                        </div>
-                        <h3 class="text-center">聯絡人資料</h3>
-                        <form action="payment.html" method="post" class="noto-sens-TC d-flex flex-column">
-                            <label class="mb-2" for="name">聯絡人姓名</label>
-                            <input class="py-2 px-4 mb-4 bg-bg-color border border-dark border-2" type="text" name="name" placeholder="請輸入聯絡人名稱" id="name">
-                            <label class="mb-2" for="mail">Email</label>
-                            <input class="py-2 px-4 mb-4 bg-bg-color border border-dark border-2" type="email" name="mail" placeholder="請輸入Email" id="mail">
-                            <label class="mb-2" for="tel">手機</label>
-                            <input class="py-2 px-4 mb-6 bg-bg-color border border-dark border-2 mb-md-8" type="tel" name="tel" placeholder="請輸入手機號碼" id="tel">
-                            <div class="row">
-                                <div class="col-md-8 m-auto mb-4">
-                                    <button class="btn btn-dark btn-hover link-hover d-flex justify-content-center align-items-center w-100"
-                                        type="submit">
-                                        確認表單資料
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                            fill="none" class="hover-d-none">
-                                            <path
-                                                d="M15.768 9.44006L11.704 5.37605C11.394 5.06605 10.892 5.06605 10.582 5.37605L10.232 5.72605C9.92201 6.03605 9.92201 6.53805 10.232 6.84805L12.826 9.44206C12.982 9.59806 13.058 9.80006 13.058 10.0021C13.058 10.2041 12.98 10.4081 12.826 10.5621L10.232 13.1561C9.92201 13.4661 9.92201 13.9681 10.232 14.2781L10.582 14.6281C10.892 14.9341 11.394 14.9341 11.704 14.6241L15.768 10.5601C15.924 10.4041 16 10.2021 16 10.0001C16 9.79806 15.922 9.59406 15.768 9.44006ZM9.76801 9.44006L5.70401 5.37605C5.39401 5.06605 4.89201 5.06605 4.58201 5.37605L4.23201 5.72605C3.92201 6.03605 3.92201 6.53805 4.23201 6.84805L6.82601 9.44206C6.98201 9.59806 7.05801 9.80006 7.05801 10.0021C7.05801 10.2041 6.98001 10.4081 6.82601 10.5621L4.23201 13.1561C3.92201 13.4661 3.92201 13.9681 4.23201 14.2781L4.58201 14.6281C4.89201 14.9341 5.39401 14.9341 5.70401 14.6241L9.76801 10.5601C9.92401 10.4041 10 10.2021 10 10.0001C10 9.79806 9.92201 9.59406 9.76801 9.44006Z"
-                                                fill="white" />
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                            fill="none" class="hover-d-inline">
-                                            <path
-                                                d="M15.768 9.44006L11.704 5.37605C11.394 5.06605 10.892 5.06605 10.582 5.37605L10.232 5.72605C9.92201 6.03605 9.92201 6.53805 10.232 6.84805L12.826 9.44206C12.982 9.59806 13.058 9.80006 13.058 10.0021C13.058 10.2041 12.98 10.4081 12.826 10.5621L10.232 13.1561C9.92201 13.4661 9.92201 13.9681 10.232 14.2781L10.582 14.6281C10.892 14.9341 11.394 14.9341 11.704 14.6241L15.768 10.5601C15.924 10.4041 16 10.2021 16 10.0001C16 9.79806 15.922 9.59406 15.768 9.44006ZM9.76801 9.44006L5.70401 5.37605C5.39401 5.06605 4.89201 5.06605 4.58201 5.37605L4.23201 5.72605C3.92201 6.03605 3.92201 6.53805 4.23201 6.84805L6.82601 9.44206C6.98201 9.59806 7.05801 9.80006 7.05801 10.0021C7.05801 10.2041 6.98001 10.4081 6.82601 10.5621L4.23201 13.1561C3.92201 13.4661 3.92201 13.9681 4.23201 14.2781L4.58201 14.6281C4.89201 14.9341 5.39401 14.9341 5.70401 14.6241L9.76801 10.5601C9.92401 10.4041 10 10.2021 10 10.0001C10 9.79806 9.92201 9.59406 9.76801 9.44006Z"
-                                                fill="yellow" />
-                                        </svg>
-                                    </button>
+
+                        <div class="mb-12 mb-md-15">
+                            <div class="mb-4 d-flex justify-content-center">
+                                <img src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/sparkler.png?raw=true"
+                                    alt="LOGO圖案">
+                            </div>
+                            <h3 class="text-center">聯絡人資料</h3>
+                            <form action="payment.html" method="post"
+                                class="noto-sens-TC d-flex flex-column needs-validation" novalidate>
+                                <div class="d-flex mb-4 flex-column">
+                                    <label class="mb-2" for="name">聯絡人姓名</label>
+                                    <input class="py-2 px-4 bg-bg-color border border-dark border-2 form-control"
+                                        type="text" name="name" placeholder="請輸入聯絡人名稱" id="name" required>
+                                    <div class="invalid-feedback">
+                                        請輸入聯絡人名稱
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-50 align-self-center text-center">
-                                <a class="fs-18 nav-hover" href="">取消購票</a>
-                            </div>
-                        </form>
-                    </div>
+
+                                <div class="d-flex mb-4 flex-column">
+                                    <label class="mb-2" for="mail">Email</label>
+                                    <input class="py-2 px-4bg-bg-color border border-dark border-2 form-control" type="email"
+                                        name="mail" placeholder="請輸入Email" id="mail" required>
+                                    <div class="invalid-feedback">
+                                        請輸入正確格式電子郵件
+                                    </div>
+                                </div>
+
+                                <div class="d-flex mb-6 mb-md-8 flex-column">
+                                    <label class="mb-2" for="tel">手機</label>
+                                    <input class="py-2 px-4 bg-bg-color border border-dark border-2 form-control"
+                                        type="tel" name="tel" placeholder="請輸入手機號碼" id="tel" maxlength="10" required>
+                                    <div class="invalid-feedback">
+                                        請輸入手機號碼
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 m-auto mb-4">
+                                        <button
+                                            class="btn btn-dark btn-hover link-hover d-flex justify-content-center align-items-center w-100"
+                                            type="submit">
+                                            確認表單資料
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none" class="hover-d-none">
+                                                <path
+                                                    d="M15.768 9.44006L11.704 5.37605C11.394 5.06605 10.892 5.06605 10.582 5.37605L10.232 5.72605C9.92201 6.03605 9.92201 6.53805 10.232 6.84805L12.826 9.44206C12.982 9.59806 13.058 9.80006 13.058 10.0021C13.058 10.2041 12.98 10.4081 12.826 10.5621L10.232 13.1561C9.92201 13.4661 9.92201 13.9681 10.232 14.2781L10.582 14.6281C10.892 14.9341 11.394 14.9341 11.704 14.6241L15.768 10.5601C15.924 10.4041 16 10.2021 16 10.0001C16 9.79806 15.922 9.59406 15.768 9.44006ZM9.76801 9.44006L5.70401 5.37605C5.39401 5.06605 4.89201 5.06605 4.58201 5.37605L4.23201 5.72605C3.92201 6.03605 3.92201 6.53805 4.23201 6.84805L6.82601 9.44206C6.98201 9.59806 7.05801 9.80006 7.05801 10.0021C7.05801 10.2041 6.98001 10.4081 6.82601 10.5621L4.23201 13.1561C3.92201 13.4661 3.92201 13.9681 4.23201 14.2781L4.58201 14.6281C4.89201 14.9341 5.39401 14.9341 5.70401 14.6241L9.76801 10.5601C9.92401 10.4041 10 10.2021 10 10.0001C10 9.79806 9.92201 9.59406 9.76801 9.44006Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none" class="hover-d-inline">
+                                                <path
+                                                    d="M15.768 9.44006L11.704 5.37605C11.394 5.06605 10.892 5.06605 10.582 5.37605L10.232 5.72605C9.92201 6.03605 9.92201 6.53805 10.232 6.84805L12.826 9.44206C12.982 9.59806 13.058 9.80006 13.058 10.0021C13.058 10.2041 12.98 10.4081 12.826 10.5621L10.232 13.1561C9.92201 13.4661 9.92201 13.9681 10.232 14.2781L10.582 14.6281C10.892 14.9341 11.394 14.9341 11.704 14.6241L15.768 10.5601C15.924 10.4041 16 10.2021 16 10.0001C16 9.79806 15.922 9.59406 15.768 9.44006ZM9.76801 9.44006L5.70401 5.37605C5.39401 5.06605 4.89201 5.06605 4.58201 5.37605L4.23201 5.72605C3.92201 6.03605 3.92201 6.53805 4.23201 6.84805L6.82601 9.44206C6.98201 9.59806 7.05801 9.80006 7.05801 10.0021C7.05801 10.2041 6.98001 10.4081 6.82601 10.5621L4.23201 13.1561C3.92201 13.4661 3.92201 13.9681 4.23201 14.2781L4.58201 14.6281C4.89201 14.9341 5.39401 14.9341 5.70401 14.6241L9.76801 10.5601C9.92401 10.4041 10 10.2021 10 10.0001C10 9.79806 9.92201 9.59406 9.76801 9.44006Z"
+                                                    fill="yellow" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="w-50 align-self-center text-center">
+                                    <a class="fs-18 nav-hover" href="">取消購票</a>
+                                </div>
+                            </form>
+                        </div>
                 </div>
             </div>
         </main>
@@ -205,3 +237,23 @@
 </body>
 
 </html>
+
+
+<script>
+    window.onload = function () {
+
+        var forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    }
+</script>

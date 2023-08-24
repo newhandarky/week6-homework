@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第六週作業-活動訂票網-訂單完成頁面</title>
-  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-38ddc4c5.js"></script>
-  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-e94f59c2.css">
+  <script type="module" crossorigin src="/week6-homework/assets/bootstrap-8fcc0f3f.js"></script>
+  <link rel="stylesheet" href="/week6-homework/assets/bootstrap-50f963bf.css">
 </head>
 
 <body>
@@ -16,18 +16,18 @@
         <div class="d-flex align-items-center">
             <h1 class="fs-lg-32 d-flex">
                 <a href="index.html" class="d-flex align-items-center">
-                    <img class="logo me-6"
+                    <img class="logo me-lg-6"
                         src="https://github.com/newhandarky/week6-homework/blob/main/assets/images/logo.png?raw=true"
                         alt="網站LOGO">
                     <span class="">7TAO </span>
                     <span class="fs-6 ms-1">活動訂票網</span>
                 </a>
             </h1>
-            <div class="d-flex">
-                <input class="ms-0 ms-lg-12 py-2 px-6 bg-bg-color" type="text" placeholder="探索活動">
-                <button class="btn btn-dark p-md-4" type="submit"><i
-                        class="p-1 icofont-search-1 text-warning"></i></button>
-            </div>
+        </div>
+        <div class="d-flex me-lg-auto">
+            <input class="ms-0 ms-lg-12 py-2 px-6 bg-bg-color" type="text" placeholder="探索活動">
+            <button class="btn btn-dark p-md-4" type="submit"><i
+                    class="p-1 icofont-search-1 text-warning"></i></button>
         </div>
         <div class="d-flex align-items-center">
             <button class="hamburger d-block d-md-none bg-bg-color rounded-1 py-1 px-3" data-bs-toggle="collapse"
@@ -80,11 +80,11 @@
         </ul>
     </div>
 </nav>
-        <main class="container-fluid pt-6 pt-md-15">
+        <main class="container pt-6 pt-md-15">
             <div class="row">
                 <div class="col-md-6 m-auto">
                     <div class="d-flex justify-content-between py-4 py-md-2 noto-Serif-TC">
-    <div
+    <div id="step-1"
         class="border-dark border ms-4 ms-md-2 step-box d-flex align-items-center justify-content-center active">
         <span class="fs-md-20">1</span>
     </div>
@@ -120,48 +120,57 @@
 </div>
 
 <script>
+    const step1 = document.querySelector("#step-1"); 
     const step2 = document.querySelector("#step-2"); 
     const step3 = document.querySelector("#step-3"); 
     const pages = location.pathname.split("/");
     const thisPage = pages[pages.length -1].split(".");
 
+    let ste = ''
+
     let render = function(step){
         step.classList.add("active");
     }
 
+    let renderSuccess = function(step){
+        step.innerHTML = '<i class="fs-16 icofont-ui-check"></i>';
+    }
+
     window.onload = function(){
         if(thisPage[0] !== "checkout"){
-            thisPage[0] === "payment" ? render(step2) : render(step3),render(step2);
+            thisPage[0] === "payment" ? (render(step2), renderSuccess(step1)) : (render(step3), render(step2), renderSuccess(step1), renderSuccess(step2));
         }
     }
 </script>                    <div class="mb-8 mb-md-10 md-lg-12">
                         <div class="text-center mb-4 mb-md-2">
                             <i class="fs-32 fs-md-48 icofont-check-circled"></i>
                         </div>
-                        <h2 class="fs-32 fs-md-40 fs-lg-48 fw-bold text-start text-md-center mb-8">訂購成功</h2>
+                        <h2 class="fs-32 fs-md-40 fs-lg-48 fw-bold text-start text-center mb-8">訂購成功</h2>
 
-                        <div class="border-top border-3 border-dark noto-Serif-TC mb-4">
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">訂單編號</span>
-                                <span class="noto-sens-TC">892746123</span>
-                            </p>
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">訂購時間</span>
-                                <span class="noto-sens-TC">2023/04/28 14:30</span>
-                            </p>
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">票券</span>
-                                <span class="noto-sens-TC">改頭換面票（含大改造）$8000</span>
-                            </p>
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">取票序號</span>
-                                <span class="noto-sens-TC text-danger fw-bold">95G54J4434</span>
-                            </p>
-                            <p class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                <span class="fw-bold">取票號碼</span>
-                                <span class="noto-sens-TC text-danger fw-bold">04597101</span>
-                            </p>
-                        </div>
+                        <table class="table border-top border-3 border-dark  Noto-Serif-TC">
+                            <tbody>
+                                <tr>
+                                    <th class="fw-bold">訂單編號</th>
+                                    <td class="noto-sens-TC text-end">892746123</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-bold">訂購時間</th>
+                                    <td class="noto-sens-TC text-end">2023/04/28 14:30</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-bold">票券</th>
+                                    <td class="noto-sens-TC text-end w-75">改頭換面票（含大改造）</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-bold">取票序號</th>
+                                    <td class="noto-sens-TC text-danger fw-bold text-end">95G54J4434</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-bold">取票號碼</th>
+                                    <td class="noto-sens-TC text-danger fw-bold text-end">04597101</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <p class="noto-sens-TC text-secondary">
                             請至 7-Eleven 完成取票，請於 ibon 點選【購票/取票/訂房】>【售票系統】>【取票】>【拓元售票系統】。<br>
                             若您未前往取票，本筆交易仍視為完成，不可取消訂單。<br>
