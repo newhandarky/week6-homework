@@ -18,7 +18,7 @@
     max-height: 119px;
 }
 
-.time::before{
+.detail__date-line::before{
     content: "";
     position: absolute;
     width: 50px;
@@ -27,6 +27,12 @@
     top: 50%;
     left: 40%;
     transform:  rotate(120deg);
+    @media (min-width: 576px){
+        left: 45%;
+    }
+    @media (min-width: 992px){
+        left: 35%;
+    }
     @media (min-width: 1400px){
         width: 100px;
         left: 30%;

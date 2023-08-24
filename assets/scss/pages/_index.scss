@@ -88,6 +88,11 @@
     }
 }
 
+// 修正滑入特效時產生的X軸
+.overflow-x-hidden{
+    overflow-y: hidden;
+}
+
 @media (min-width: 576px) {
     .event {
         img {
