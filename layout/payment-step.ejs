@@ -41,9 +41,7 @@
     const pages = location.pathname.split("/");
     const thisPage = pages[pages.length -1].split(".");
 
-    let ste = ''
-
-    let render = function(step){
+    let renderBg = function(step){
         step.classList.add("active");
     }
 
@@ -51,9 +49,21 @@
         step.innerHTML = '<i class="fs-16 icofont-ui-check"></i>';
     }
 
+    let renderPagePayment = function(){
+        renderBg(step2);
+        renderSuccess(step1);
+    }
+    
+    let renderPageFinish = function(){
+        renderBg(step2);
+        renderBg(step3);
+        renderSuccess(step1);
+        renderSuccess(step2);
+    }
+
     window.onload = function(){
         if(thisPage[0] !== "checkout"){
-            thisPage[0] === "payment" ? (render(step2), renderSuccess(step1)) : (render(step3), render(step2), renderSuccess(step1), renderSuccess(step2));
+            thisPage[0] === "payment" ? renderPagePayment() : renderPageFinish();
         }
     }
 </script>
